@@ -1,0 +1,409 @@
+html, body{
+
+    width: 100%;
+    height:100%;
+    padding: 0%;
+    margin: 0%;
+
+  }
+
+  .navList{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
+}
+
+
+
+
+.BigScreen_view1{
+    grid-area:BigScreen_view1;
+
+
+}
+.BigScreen_view2{
+    grid-area:BigScreen_view2;
+
+
+}
+
+
+
+
+  .navList li a{
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+    font-weight: bold;
+    
+
+
+  }
+  
+
+ 
+  figure{
+    grid-area: figure;
+  }
+  header{
+    grid-area: head; 
+  }
+  aside{
+ grid-area: aside; 
+  }
+  .homeNav{
+  
+    background-color: #00a82d;
+    grid-area: nav;
+
+}
+
+
+footer{
+
+    grid-area: foot;
+    background-color: #00a82d;
+    color:white;
+    text-align:center;
+}
+
+.BigScreen_view1,.BigScreen_view2
+{
+    background-color:  #adfc03;
+   
+}
+
+#insu_postal
+        {
+            margin-bottom: 21px;
+        }
+
+        .btn {
+            
+            border: none;
+            color: black;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+        
+
+
+
+
+/*Big Screen*/
+@media only screen and (min-width: 1201px)  {
+ 
+  .addressImages{
+    height: 38px;
+    width: 90px;
+  }
+
+
+  .BigScreen_view1,.BigScreen_view2 {
+    width: 100%;
+
+
+  }
+  .BigScreen_view1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+
+  }
+  .BigScreen_view2{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+
+  }
+
+  
+
+
+  
+  
+  .BigScreen_view1 > a,   .BigScreen_view2 > a 
+  {
+   margin: 1%;
+
+  }
+
+
+  
+ 
+  .logoImage {
+    height: 100px;
+    width: 90%;
+}
+
+    
+
+
+
+
+
+
+
+aside{
+  margin-top: 2%;
+  font-size: 134%;
+}
+
+
+    .wrapper{
+     
+        display:grid;
+        width: 95%;
+        margin:auto;
+      /*  background-color: lightblue;*/
+        grid-template-areas: 'figure aside aside'
+                              'figure aside aside'
+                              'nav nav nav'
+                              'BigScreen_view1 BigScreen_view1 BigScreen_view1'
+                              'BigScreen_view2 BigScreen_view2 BigScreen_view2'
+                              
+                              'foot foot foot'
+                              'foot foot foot'
+      
+                             
+    
+      
+      }
+
+      #insure_select
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+        background-color: #e2e9ef;
+        width: 768px;
+        height: 160px;
+        
+      }
+      .head_form
+      {
+        border-right: 1px solid black;
+        padding-right: 60px;
+      }
+      .row_feilds
+      {
+        display: flex;
+        flex-direction: column;
+        
+
+      }
+      #insu_postal
+      {
+          margin-bottom: 21px;
+      }
+
+     
+      .homeScreenImage{
+        display:none;
+        
+        }
+
+        
+
+
+    
+
+
+
+
+}
+
+
+
+/*Small Screen*/
+@media only screen and (max-width: 992px) {
+
+  .logoImage{
+    height: 86px;
+  }
+  h5{
+    text-align: center;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+}
+
+  .navList li a {
+    font-size:10px;
+  }
+  
+ 
+  .addressImages{
+    height: 17px;
+    width: 35px;
+  }
+  blog{
+
+    display:none;
+  }
+  .pollOpinion{
+    display:none;
+  }
+    
+    
+    .BigScreen_view2{
+
+        display:none;
+      }
+
+
+    .wrapper{
+        display:grid;
+        width: 100%;
+        height:100%;
+        margin:auto;
+        grid-template-areas: 'figure figure figure figure'
+                              'aside aside aside aside'
+                              'nav nav nav nav'
+                              'BigScreen_view1 BigScreen_view1 BigScreen_view1 BigScreen_view1'
+                              'BigScreen_view1 BigScreen_view1 BigScreen_view1 BigScreen_view1'
+                              'foot foot foot foot'
+      
+                             
+    
+      
+      }
+  
+      #insure_select
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+    
+        
+      }
+      
+      .row_feilds
+      {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        
+
+      }
+  .homeScreenImage{
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+}
+
+/*Medium Screen*/
+@media only screen and (min-width: 993px) and (max-width: 1200px)  {
+
+  aside{
+
+    margin-top: 5%;
+  }
+
+  .addressImages {
+    height: 60px;
+    width: 80px;
+}
+  
+  
+  .BigScreen_view1, .BigScreen_view2{
+    width: 100%;
+
+
+  }
+  .BigScreen_view1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+
+  }
+  .BigScreen_view2{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+  }
+  
+
+  
+  
+  .BigScreen_view1 > a,   .BigScreen_view2 > a  
+  {
+   margin: 1%;
+
+  }
+
+
+  
+ 
+  .logoImage {
+    height: 100px;
+    width: 90%;
+}
+
+    
+
+    .wrapper{
+     
+        display:grid;
+        width: 95%;
+        margin:auto;
+      
+      /*  background-color: lightblue;*/
+        grid-template-areas: 'figure aside'
+                              'figure aside'
+                              'nav nav'
+                              'BigScreen_view1 BigScreen_view1'
+                              'BigScreen_view2 BigScreen_view2'
+                              'foot foot'
+      
+                             
+    
+      
+      }
+
+        #insure_select
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items:center;
+          background-color: #e2e9ef;
+          width: 768px;
+          height: 160px;
+          
+        }
+        .head_form
+        {
+          border-right: 1px solid black;
+          padding-right: 60px;
+        }
+        .row_feilds
+        {
+          display: flex;
+          flex-direction: column;
+          
+  
+        }
+}

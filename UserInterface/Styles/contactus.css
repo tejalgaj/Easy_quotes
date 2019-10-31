@@ -1,0 +1,354 @@
+html, body{
+
+    width: 100%;
+    height:100%;
+    padding: 0%;
+    margin: 0%;
+
+  }
+
+  .input_text {
+    width: 55%;
+    height: 150%;
+  }
+  
+h4,h5{
+    text-align: center;
+}
+  .pollOpinion{
+    grid-area:pollOpinion;
+  }
+
+  blog{
+    grid-area:blog;
+  }
+
+  .contactImage1{
+
+    grid-area:contactImage1;
+  }
+
+  .contactImage2{
+    grid-area:contactImage2;
+
+  }
+  .SendButton{
+    color: white;
+    padding: 0;
+    border: 0;
+    height: 30px;
+    width: 51px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 150px;
+    width: 100px;
+    
+  
+   }
+  
+
+  .navList{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
+}
+
+.navList li a{
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+    font-weight: bold;
+    
+
+
+  }
+
+  footer{
+
+    grid-area: foot;
+    background-color: #00a82d;
+    color:white;
+    text-align:center;
+}
+
+figure{
+    grid-area: figure;
+  }
+  header{
+    grid-area: head; 
+  }
+  aside{
+ grid-area: aside; 
+  }
+
+  .homeNav{
+  
+    background-color: #00a82d;
+    grid-area: nav;
+
+}
+
+
+.formContact{
+
+    grid-area: formContact;
+
+}
+
+
+
+  /*Small Screen*/
+@media only screen and (max-width: 992px) {
+
+  .logoImage{
+    height: 86px;
+  }
+  h5{
+    text-align: center;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+}
+
+  section{
+    display:none;
+
+  }
+
+  .pollOpinion{
+    display:none;
+  }
+
+  blog{
+
+    display:none;
+  }
+    
+    
+       aside > h5{
+            text-align: center;
+          }
+  
+
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navList li a {
+        font-size:10px;
+      }
+      
+    .addressImages{
+      height: 17px;
+      width: 35px;
+      }
+
+
+      .wrapper{
+        display:grid;
+        width: 100%;
+        height:100%;
+        margin:auto;
+        grid-template-areas:  'figure figure figure figure'
+                              'aside aside aside aside'
+                              'nav nav nav nav'
+                              'formContact formContact formContact formContact'
+                              'formContact formContact formContact formContact'
+                              'foot foot foot foot'
+                }
+
+      .formElement{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .form-row {    
+        display: flex;
+        justify-content: space-between;
+        margin: 3%;
+    
+    
+    }
+
+    .SendButton{
+
+      display: flex;
+      justify-content: flex-end;
+    }
+
+
+
+
+}
+/*Medium Screen*/
+
+@media only screen and (min-width: 993px) and (max-width: 1200px){
+  aside{
+
+    margin-top: 5%;
+  }
+
+  .logoImage {
+    height: 100px;
+    width: 90%;
+}
+  .pollOpinion{
+    display:none;
+  }
+section{
+  display:none;}
+  blog{
+
+    display:none;
+  }
+  
+.addressImages {
+  height: 60px;
+  width: 80px;
+}
+
+  .formElement{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-row {    
+    display: flex;
+    justify-content: space-between;
+    margin: 3%;
+
+
+}
+
+  .wrapper{
+     
+    display:grid;
+    width: 95%;
+    margin:auto;
+  
+  /*  background-color: lightblue;*/
+    grid-template-areas: 'figure aside'
+                          'figure aside'
+                          'nav nav'
+                          'formContact formContact'
+                          'formContact formContact'
+                          'foot foot'
+  
+                         
+
+  
+  }
+
+}
+
+
+/*Big Screen*/
+@media only screen and (min-width: 1201px)  {
+  aside{
+    margin-top: 2%;
+    font-size: 134%;
+  }
+  .logoImage {
+    height: 100px;
+    width: 90%;
+}
+ 
+  .addressImages{
+    height: 38px;
+    width: 90px;
+  }
+
+fieldset{
+  margin-bottom: 8%;
+    margin-top: 4%;
+}
+
+
+  .contactPage{
+    width: 50%;
+    height: 80%;
+    margin-top: 5%;
+    margin-left: 22%;
+
+  }
+
+  blog {
+    padding: 1%;
+    border-color: #00a82d;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 12px;
+    width: 70%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+  .pollOpinion {
+    padding: 1%;
+    border-color: #00a82d;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 12px;
+    width: 70%;
+    margin: auto;
+    min-height: 364px;
+    margin-bottom: 1%;
+    
+}
+
+.formElement{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-row {    
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
+
+
+}
+
+
+
+  .wrapper{
+     
+    display:grid;
+    width: 95%;
+    margin:auto;
+  /*  background-color: lightblue;*/
+    grid-template-areas: 'figure aside aside aside aside'
+                          'figure aside aside aside aside'
+                          'nav nav nav nav nav'
+                          'contactImage1 formContact formContact formContact blog'
+                          'contactImage1  formContact formContact formContact blog'
+                          'contactImage2 formContact formContact formContact pollOpinion'
+                          'contactImage2 formContact formContact formContact pollOpinion'
+                          'foot foot foot foot foot'
+  
+                         
+
+  
+  }
+
+ 
+  .poll{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  
+  .Yes {width: 90%; background-color: #4CAF50;}
+  .No {width: 10%; background-color: #2196F3;}
+}

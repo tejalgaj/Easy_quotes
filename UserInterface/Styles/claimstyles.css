@@ -1,0 +1,431 @@
+html, body{
+
+    width: 100%;
+    height:100%;
+    padding: 0%;
+    margin: 0%;
+
+  }
+
+  .navList{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
+}
+
+
+.pollOpinion{
+  grid-area:pollOpinion;
+}
+.BigScreen_view1{
+    grid-area:BigScreen_view1;
+
+
+}
+.BigScreen_view2{
+    grid-area:BigScreen_view2;
+
+
+}
+  .navList li a{
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+    font-weight: bold;
+    
+
+
+  }
+  .main_content{
+
+    grid-area:smain;
+  }
+
+ 
+  figure{
+    grid-area: figure;
+  }
+  header{
+    grid-area: head; 
+  }
+  aside{
+ grid-area: aside; 
+  }
+  .homeNav{
+  
+    background-color: #00a82d;
+    grid-area: nav;
+
+}
+
+
+footer{
+
+    grid-area: foot;
+    background-color: #00a82d;
+    color:white;
+    text-align:center;
+}
+
+.outer_section
+{
+  
+  border-radius: 12px;
+  border-top:6px solid white;
+  border-bottom:6px solid white;
+  border-right:4px solid white;
+}
+
+#auto {background-color: #d9e010;}
+#home {background-color: #adfc03;}
+
+.tablink:hover {
+    background-color: #777;
+  }
+
+
+
+
+
+/*Big Screen*/
+@media only screen and (min-width: 1201px)  {
+ 
+  .addressImages{
+    height: 38px;
+    width: 90px;
+  }
+
+
+  .BigScreen_view1, .BigScreen_view2{
+    width: 100%;
+
+
+  }
+  .BigScreen_view1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:stretch;
+    background-image: linear-gradient(90deg, #f0f8fa, #f7f9fa);
+
+  }
+  .BigScreen_view2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+  }
+  
+
+  
+  
+  .BigScreen_view1 > a,   .BigScreen_view2 > a 
+  {
+   margin: 1%;
+
+  }
+
+
+  .BigScreen_view1 > article,  .BigScreen_view2 > article,  .BigScreen_view3 > article,  .BigScreen_view4 > article 
+  {
+   margin: 1%;
+
+  }
+ 
+  .logoImage {
+    height: 100px;
+    width: 90%;
+}
+
+    
+    
+
+.pollOpinion{
+
+  padding: 1%;
+  margin: 1%;
+  border-color: #00a82d;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 12px;
+
+}
+
+
+
+
+aside{
+  margin-top: 2%;
+  font-size: 134%;
+}
+.blogHeading{
+  font-weight: bold;
+
+
+}
+
+    .wrapper{
+     
+        display:grid;
+        width: 95%;
+        margin:auto;
+      /*  background-color: lightblue;*/
+        grid-template-areas: 'figure aside aside'
+                              'figure aside aside'
+                              'nav nav nav'
+                              'BigScreen_view1 BigScreen_view1 pollOpinion'
+                              'BigScreen_view2 BigScreen_view2 pollOpinion'
+                
+                              'foot foot foot'
+                              'foot foot foot'
+      
+                             
+    
+      
+      }
+      .claim_img
+      {
+          padding-bottom: 80px;
+          padding-top: 80px;
+      }
+
+
+      
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 40px;
+        font-size: 17px;
+        
+       
+      }
+      
+      
+      
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: black;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+}
+
+
+
+/*Small Screen*/
+@media only screen and (max-width: 992px) {
+
+  .logoImage{
+    height: 86px;
+  }
+  h5{
+    text-align: center;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+}
+
+  .navList li a {
+    font-size:10px;
+  }
+  
+ 
+  .addressImages{
+    height: 17px;
+    width: 35px;
+  }
+  
+  .pollOpinion{
+    display:none;
+  }
+    .BigScreen_view1{
+
+      display:none;
+    }
+    
+    .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 40px;
+        font-size:14px;
+        
+       
+      }
+      
+      
+      
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: black;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    
+
+    
+   
+    .wrapper{
+        display:grid;
+        width: 100%;
+        height:100%;
+        margin:auto;
+        grid-template-areas: 'figure figure figure figure'
+                              'aside aside aside aside'
+                              'nav nav nav nav'
+                              'BigScreen_view2 BigScreen_view2 BigScreen_view2 BigScreen_view2'
+                              'BigScreen_view2 BigScreen_view2 BigScreen_view2 BigScreen_view2'
+                              'foot foot foot foot'
+      
+                             
+    
+      
+      }
+
+
+  
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+}
+
+/*Medium Screen*/
+@media only screen and (min-width: 993px) and (max-width: 1200px)  {
+
+  aside{
+
+    margin-top: 5%;
+  }
+
+  .addressImages {
+    height: 60px;
+    width: 80px;
+}
+  .pollOpinion{
+  display:none;
+
+ }
+  
+  
+  .BigScreen_view1, .BigScreen_view2{
+    width: 100%;
+
+
+  }
+  .BigScreen_view1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:stretch;
+    background-image: linear-gradient(90deg, #f0f8fa, #f7f9fa);
+
+  }
+  .BigScreen_view2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+  }
+  
+
+  
+  .BigScreen_view1 > a,   .BigScreen_view2 > a 
+  {
+   margin: 1%;
+
+  }
+
+
+  .BigScreen_view1 > article,  .BigScreen_view2 > article
+  {
+   margin: 1%;
+
+  }
+ 
+  .logoImage {
+    height: 100px;
+    width: 90%;
+}
+
+    
+    
+
+    .wrapper{
+     
+        display:grid;
+        width: 95%;
+        margin:auto;
+      
+      /*  background-color: lightblue;*/
+        grid-template-areas: 'figure aside'
+                              'figure aside'
+                              'nav nav'
+                              'BigScreen_view1 BigScreen_view1'
+                              'BigScreen_view1 BigScreen_view1'
+                              'BigScreen_view2 BigScreen_view2'
+                              'BigScreen_view2 BigScreen_view2'
+                              'foot foot'
+      }
+
+     
+
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 40px;
+            font-size: 17px;
+            
+           
+          }
+          
+          
+          
+          /* Style the tab content (and add height:100% for full page content) */
+          .tabcontent {
+            color: black;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+
+
+    
+
+
+
+
+}
