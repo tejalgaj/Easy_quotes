@@ -35,16 +35,6 @@ figure {
     width: 100%;
 }
 
-.formLanding{
-
-
-    grid-area: formLanding;
-    margin-top: 20px;
-    max-width: 862px;
-    
-    
-    }
-
 
 /* Html, body, pollOpinion, smallMain css start */
 
@@ -82,13 +72,6 @@ header {
     padding-top: 1.5%;
     margin-right: 20px;
 }
-.form-row {    
-    display: flex;
-      justify-content: space-around;
-      margin: 3%;
-  
-  
-  }
 
 
 /*Header Css end*/
@@ -200,11 +183,13 @@ fieldset {
     width: 52%;
     height: 100%;
 }
-.dropdown_select{
+
+.dropdown_select {
     width: 52%;
     height: 100%;
     max-width: 170px;
 }
+
 .auto_ins_bttn {
     font-weight: bold;
     font-size: 19px;
@@ -213,7 +198,7 @@ fieldset {
     border-radius: 26px;
     background: #139415;
     text-decoration: none;
-  }
+}
 
 .SendButton {
     color: white;
@@ -226,21 +211,15 @@ fieldset {
     margin-left: 130px;
     width: 100px;
 }
-.formElement{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 
 /*Field set and input tags css end*/
 
+
 /*Small Screen*/
 
 @media only screen and (max-width: 992px) {
-    
     /*Header section css start*/
-    
     .navList li a {
         font-size: 10px;
     }
@@ -255,7 +234,6 @@ fieldset {
         font-size: 12px;
     }
     /*Header section css end*/
-    
     .formContact {
         margin-top: 2%;
     }
@@ -291,11 +269,7 @@ fieldset {
         width: 100%;
         height: 100%;
         margin: auto;
-        grid-template-areas: 'header header header header' 'logo logo logo logo' 'nav nav nav nav'
-        'formLanding formLanding formLanding formLanding'
-                              'formLanding formLanding formLanding formLanding'
-                              'formLanding formLanding formLanding formLanding'
-                              'formLanding formLanding formLanding formLanding' 'foot foot foot foot'
+        grid-template-areas: 'header header header header' 'logo logo logo logo' 'nav nav nav nav' 'formContact formContact formContact formContact' 'formContact formContact formContact formContact' 'foot foot foot foot'
     }
     /*Wrapper section css end*/
     /*Form elements css start*/
@@ -320,30 +294,12 @@ fieldset {
     .navList {
         justify-content: center;
     }
-
-    .img_house{
-        position: relative; 
-       width: 100%;
-    
-      }
-      .form_home{
-        position: absolute;
-        width: 100%;
-        top: 48%;
-      }
 }
 
 
 /*Medium Screen*/
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    
-    .form_home {
-        position: absolute;
-        width: 100%;
-        top: 48%;
-    }
-  
     .formContact {
         margin-top: 1%;
     }
@@ -368,8 +324,7 @@ fieldset {
         width: 95%;
         margin: auto;
         /*  background-color: lightblue;*/
-        grid-template-areas: 'header header' 'logo logo' 'nav nav'  'formLanding formLanding'
-        'formLanding formLanding' 'foot foot'
+        grid-template-areas: 'header header' 'logo logo' 'nav nav' 'formContact formContact' 'formContact formContact' 'foot foot'
     }
     /*Wrapper section css end*/
     /*Poll section start*/
@@ -391,15 +346,7 @@ fieldset {
 /*Big Screen*/
 
 @media only screen and (min-width: 1201px) {
-    .form_home{
-        position: absolute;
-        width: 100%;
-        top: 48%;
-        left: 10%;
-      }
-    
     /*Poll section start*/
-    
     .pollOpinion {
         padding: 1%;
         width: 70%;
@@ -458,14 +405,7 @@ fieldset {
         display: grid;
         width: 95%;
         margin: auto;
-        grid-template-areas: 'header header header header '
-         'logo logo logo logo '
-          'nav nav nav nav '
-           'insuranceFirst formLanding formLanding  blog'
-            'insuranceFirst  formLanding formLanding  blog'
-             'insuranceSecond formLanding formLanding   pollOpinion'
-              'insuranceSecond formLanding formLanding   pollOpinion' 
-              'foot foot foot foot '
+        grid-template-areas: 'header header header header ' 'logo logo logo logo ' 'nav nav nav nav ' 'insuranceFirst formContact formContact  blog' 'insuranceFirst  formContact formContact  blog' 'insuranceSecond formContact formContact   pollOpinion' 'insuranceSecond formContact formContact   pollOpinion' 'foot foot foot foot '
     }
     /*Wrapper css end*/
     .logo {
