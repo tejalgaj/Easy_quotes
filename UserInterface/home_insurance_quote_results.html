@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <title>Auto Insurance Quote Results</title>
+    <title>Home Insurance Quote Results</title>
     <link rel="stylesheet" href="Styles/auto_home_quote_results.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+
 </head>
 
 <body>
@@ -31,86 +32,37 @@
         <section class="advertisementFirst"><img class="insuranceadv" src="images/Insurance_adv.png" alt="Insurance Advertisement"></section>
         <section class="advertisementSecond"><img class="insuranceadv" src="images/insuranceadv2.jpg" alt="Insurance Advertisement second"></section>
         <progress value="80" max="100">
-         </progress>
+        </progress>
         <main class="smallMain">
             <div class="background">
+                <div class="banner">
+                    <p class="paragraph">Home Insurance <b>step 3 of 3</b></p>
+                    <h2>Quote #Q008184274</h2>
+                    <img class="image9" src="images/dollar-bag-green.jpg" width="40px" height="60px">
+                    <h3 id="right">$300.17/mo*</h3>
+                    <h3 id="right">$3600/yr*</h3>
+                    <h3 id="right">Call @ 1-647-333-2007</h3>
+                </div>
                 <form method="get" action="auto_insurance_quote_results.html">
-                    <div class="banner">
-                        <p class="paragraph">Auto Insurance <b>step 3 of 3</b></p>
-                        <h2>Quote #Q008184274</h2>
-                        <img class="image9" src="images/dollar-bag-green.jpg" width="40px" height="60px">
-                        <h3>$322.17/mo*</h3>
-                        <h3>$3866/yr*</h3>
-                        <h3>Call @ 647-333-2007</h3>
-                    </div>
                     <fieldset>
-                        <legend><b>Coverage Options:</b></legend>
-                        <h4>Liability(limit):</h4>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                        <option>Coverages</option> 
-                        <option value="1">$50,000</option> 
-                        <option value="2">$1,00,000</option> 
-                        <option value="3">$2,00,000</option> 
-                    </select>
-                        </div>
-                        <h4>Liability to non-owned automobiles(s):</h4>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                            <option>Coverages</option> 
-                            <option value="1">$50,000</option> 
-                            <option value="2">$1,00,000</option> 
-                            <option value="3">$2,00,000</option> 
-                    </select>
-                        </div>
-                        <h4>Collision(deductible)</h4>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                            <option>Coverages</option> 
-                            <option value="1">$50,000</option> 
-                            <option value="2">$1,00,000</option> 
-                            <option value="3">$2,00,000</option> 
-                    </select>
-                        </div>
-                        <h4>Comprehensive(deductible)</h4>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                            <option>Coverages</option> 
-                            <option value="1">$50,000</option> 
-                            <option value="2">$1,00,000</option> 
-                            <option value="3">$2,00,000</option> 
-                    </select>
-                        </div>
-                        <h4>Loss of Use</h4>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                            <option>Coverages</option> 
-                            <option value="1">$50,000</option> 
-                            <option value="2">$1,00,000</option> 
-                            <option value="3">$2,00,000</option> 
-                    </select>
-                        </div>
-                        <h4>Family Protection:</h4><br>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                            <option>Included</option>                            
-                    </select>
-                        </div>
-
-                        <h4>Need to add more drivers or vehicles?</h4>
-                        <div class="select">
-                            <select name="slct" id="slct"> 
-                        <option>Select</option> 
-                        <option value="1">Yes</option> 
-                        <option value="2">No</option> 
-                    </select>
-                        </div>
+                        <legend>Please enter uour personal details</legend>
+                        <div class="customer">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required><br><br>
+                            <label for="Phone Number">Phone Number:</label>
+                            <input type="Phone Number" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                            <div>
+                                <label for="radio">Contact me by:</label><br>
+                                <input type="radio" name="Contact me by:" value="Text" />Text<br>
+                                <input type="radio" name="Contact me by:" value="Email" />Email<br/>
+                                <input type="radio" name="Contact me by:" value="Don't contact me" />Don't contact me<br/>
+                            </div>
                     </fieldset>
+                    <input type="submit" class="submitButton" value="Contact me">
                     <div class="block">
-                        <h3>Your applied discounts</h3>
-                        <p>Call us for more information. You might qualify for additional discounts.</p>
-                        <p>Conviction free discount-Principal Operator</p>
-                        <p>Tip: You may be eligible for other discounts that are not applied automatically through the online quote, so be sure to call us.</p>
+                        <p>Bundle Auto along with Home and get a discount of nearly $50/month</p>
+                        <p>Would you like to continue?</p>
+                        <a href="AutoInsuarnce.html">Get an Auto Estimate</a>
                     </div>
                     <div class="right">
                         <p><b>Would you like to contact us?</b></p>
@@ -119,7 +71,7 @@
                         <p>1-647-333-2007</p>
                         <p>Monday - Friday 8:00 am - 8:00 pm EST</p>
                     </div>
-            </div>
+                    </div>
         </main>
         <section class="blog">
             <h2>Blog</h2>
@@ -166,7 +118,6 @@
                     </figure>
                 </a>
             </section>
-
             <section class="row footerSection">
                 <section class="footerColumnQuote">
 
@@ -174,17 +125,16 @@
                     <p>Insurance got you under our wing. Without it, Insurance is like a parachute - If you don't have it when you need it, you will never need it again! </p>
                     <ul class="socialMediaIcon">
                         <li class=""><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </a></li>
+                                </a></li>
                         <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.facebook.com/"><i class="fa fa-facebook"
-                                                    aria-hidden="true"></i>
-                                            </a></li>
+                                        aria-hidden="true"></i>
+                                </a></li>
                         <li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/"><i class="fa fa-instagram"
-                                                    aria-hidden="true"></i>
-                                            </a></li>
+                                        aria-hidden="true"></i>
+                                </a></li>
                     </ul>
                 </section>
                 <section class="footerColumnMenu">
-
                     <h2 class="footHeading">Menu</h2>
                     <ul class="menuStyled">
                         <li><a href="home.html">Home</a></li>
@@ -197,17 +147,15 @@
                     </ul>
                 </section>
                 <section class="footerHelp">
+
                     <h2 class="footHeading_help">Help</h2>
                     <p>
                         Looking for affordable insurance products? Insurdinary offers the best insurance rates in Canada. now you can compare Canadian insurance providers side-by-side and get the best quotes for you. Get instant Health Insurance, Life Insurance, Travel Insurance
                         and other insurance product quotes online – fast!
                     </p>
-
                 </section>
                 <section class="footerColumnQuestion">
-
                     <h2 class="footHeading">Have a Questions?</h2>
-
                     <ul class="locDet">
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i>
                             <p>103 Triple crown avenue, Etobicoke Ontario
@@ -215,7 +163,6 @@
                         </li>
                         <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
                             <p>+1 647-615-0190</p>
-
                         </li>
                         <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                             <p>Easy@gmail.com</p>
