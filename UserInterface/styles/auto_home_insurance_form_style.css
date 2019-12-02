@@ -35,6 +35,10 @@ figure {
     width: 100%;
 }
 
+.error_fname{
+ display: hidden;
+}
+
 
 /* Html, body, pollOpinion, smallMain css start */
 

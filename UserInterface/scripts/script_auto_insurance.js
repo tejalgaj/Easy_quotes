@@ -1,52 +1,34 @@
-// Slidder home page javascript
-var slideIndex = 0;
-showSlides();
+//Variables
+let error_fname = document.getElementById("error_fname");
+error_fname.hidden = true;
+let error_lname = document.getElementById("error_lname");
+error_lname.hidden = true;
+let error_age = document.getElementById("error_age");
+error_age.hidden = true;
+let error_issuingProvince = document.getElementById("error_issuingProvince");
+error_issuingProvince.hidden = true;
+let error_licenceClass = document.getElementById("error_licenceClass");
+error_licenceClass.hidden = true;
+let error_buydate = document.getElementById("error_buydate");
+error_buydate.hidden = true;
+let error_purchasecondition = document.getElementById("error_purchasecondition");
+error_purchasecondition.hidden = true;
+let error_annualdistance = document.getElementById("error_annualdistance");
+error_annualdistance.hidden = true;
+let error_passenger = document.getElementById("error_passenger");
+error_passenger.hidden = true;
+let error_otherbuisness = document.getElementById("error_otherbuisness");
+error_otherbuisness.hidden = true;
+let error_wintertyre = document.getElementById("error_wintertyre");
+error_wintertyre.hidden = true;
+let error_coveradedate = document.getElementById("error_coveradedate");
+error_coveradedate.hidden = true;
+document.getElementById("vehiclevalidation").disabled = true;
+document.getElementById("submitId").disabled = true;
 
-function plusSlides(n) {
-    showSlidesmanual(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlidesmanual(slideIndex = n);
-}
+//language javascipt
 
-function showSlidesmanual(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 6000); // Change image every 6 seconds
-
-}
-
-//Translation javascript
-
-let translations =
-{
+let translations = {
     "en": {
 
         "Home": "Home",
@@ -119,7 +101,7 @@ let translations =
         "nav_auto_insurance": "Assurance automobile",
         "nav_contact_us": "Contactez-nous",
         "nav_blog": "Blog",
-        "nav_faq": "Questions - réponses",
+        "nav_faq": "questions - réponses",
         "nav_claims": "réclamations",
         "help": "Aidez-moi"
 
@@ -129,7 +111,7 @@ let translations =
 
 };
 
-let language = "en";
+var language = "en";
 
 function writeInLanguage() {
 
@@ -139,6 +121,10 @@ function writeInLanguage() {
     let contactus = document.getElementById("contact_us");
     let blog = document.getElementById("blog");
     let process = document.getElementById("process");
+    let home_insurance_detail = document.getElementById("home_insurance_detail");
+    let auto_insurance_detail = document.getElementById("auto_insurance_detail");
+    let contact_us_details = document.getElementById("contact_us_details");
+    let faq_details = document.getElementById("faq_details");
     let home_insurance_heading = document.getElementById("home_insurance_heading");
     let auto_insurance_heading = document.getElementById("auto_insurance_heading");
     let contact_us_heading = document.getElementById("contact_us_heading");
@@ -165,10 +151,7 @@ function writeInLanguage() {
     let nav_faq = document.getElementById("nav_faq");
     let nav_claims = document.getElementById("nav_claims");
     let help = document.getElementById("help");
-    let home_insurance_detail = document.getElementById("home_insurance_detail");
-    let auto_insurance_detail = document.getElementById("auto_insurance_detail");
-    let contact_us_details = document.getElementById("contact_us_details");
-    let faq_details = document.getElementById("faq_details");
+
 
 
 
@@ -179,6 +162,10 @@ function writeInLanguage() {
     let translate_contact_us = translations[language].contact_us;
     let translate_blog = translations[language].blog;
     let translate_process = translations[language].process;
+    let translate_home_insurance_detail = translations[language].home_insurance_detail;
+    let translate_auto_insurance_detail = translations[language].auto_insurance_detail;
+    let translate_contact_us_details = translations[language].contact_us_details;
+    let translate_faq_details = translations[language].faq_details;
     let translate_faq = translations[language].faq;
     let translate_blog_heading_1 = translations[language].blog_heading_1;
     let translate_blog_heading_2 = translations[language].blog_heading_2;
@@ -196,11 +183,8 @@ function writeInLanguage() {
     let translate_have_question = translations[language].have_question;
     let translate_nav_claims = translations[language].nav_claims;
     let translate_help = translations[language].help;
-    let translate_home_insurance_heading = translations[language].home_insurance;
-    let translate_home_insurance_detail = translations[language].home_insurance_detail;
-    let translate_auto_insurance_detail = translations[language].auto_insurance_detail;
-    let translate_contact_us_details = translations[language].contact_us_details;
-    let translate_faq_details = translations[language].faq_details;
+
+
 
 
 
@@ -235,20 +219,181 @@ function writeInLanguage() {
     nav_faq.innerText = translate_auto_insurance;
     nav_claims.innerText = translate_nav_claims;
     help.innerText = translate_help;
-    home_insurance_heading.innerText = translate_home_insurance_heading;
-    home_insurance_detail.innerText = translate_home_insurance_detail;
-    auto_insurance_heading.innerText = translate_auto_insurance;
-    contact_us_heading.innerText = translate_contact_us;
-    faq_heading.innerText = translate_faq;
-    auto_insurance_detail.innerText = translate_auto_insurance_detail;
-    contact_us_details.innerText = translate_contact_us_details;
-    faq_details.innerText = translate_faq_details;
+
+
 
 
 }
 
-$("#language").on("change", function () {
+$("#language").on("change", function() {
     language = $("#language").val();
     writeInLanguage();
 });
 writeInLanguage();
+
+//user validation
+
+function validate_user() {
+    let fname = document.getElementById("firstName").value;
+    let fnameRGEX = /^[a-z ,.'-]+$/i;
+
+
+    let lname = document.getElementById("lastName").value;
+    let lnameRGEX = /^[a-z ,.'-]+$/i;
+
+    let issuingProvince = document.getElementById("issuingProvince").value;
+    let licenceClass = document.getElementById("licenceClass").value;
+    let today = new Date();
+    let birthdate = new Date(document.getElementById("birthday").value);
+    let presentdate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    let age = today.getFullYear() - birthdate.getFullYear();
+    let m = today.getMonth() - birthdate.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+        age--;
+    }
+    console.log(birthdate);
+    error_fname.hidden = true;
+    error_lname.hidden = true;
+    error_age.hidden = true;
+    error_issuingProvince.hidden = true;
+    error_licenceClass.hidden = true;
+
+    let fnameresult = fnameRGEX.test(fname);
+    let lnameresult = fnameRGEX.test(lname);
+
+    if (fnameresult == false || fname.length < 4) {
+
+        error_fname.hidden = false;
+
+
+
+    }
+    if (fnameresult == true && fname.length >= 4) {
+
+        if (lnameresult == false || lname.length < 4) {
+
+            error_lname.hidden = false;
+        }
+        if (lnameresult == true && lname.length >= 4) {
+            if (birthdate == "Invalid Date") {
+
+                error_age.hidden = false;
+            }
+            if (age < 18) {
+
+                error_age.hidden = false;
+            }
+            if (age > 18 && !(birthdate == "Invalid Date")) {
+                if (issuingProvince == "Select a state") {
+
+                    error_issuingProvince.hidden = false;
+
+                } else {
+                    if (licenceClass == "Select a License Class") {
+                        error_licenceClass.hidden = false;
+                    } else {
+
+                        document.getElementById("myProgress").value = "50";
+                        document.getElementById("vehiclevalidation").disabled = false;
+                        alert("Your personal information is valid Please fill vehicle information");
+
+
+                    }
+                }
+
+            }
+
+
+        }
+
+
+    }
+}
+// vehicle validation
+function validate_vehicle() {
+
+    error_buydate.hidden = true;
+    error_purchasecondition.hidden = true;
+    error_annualdistance.hidden = true;
+    error_passenger.hidden = true;
+    error_wintertyre.hidden = true;
+    error_coveradedate.hidden = true;
+    let purchaseCondition = document.getElementById("purchaseCondition").value;
+    let buydate = new Date(document.getElementById("buydate").value);
+    let annualDistance = document.getElementById("annualDistance").value;
+    error_otherbuisness.hidden = true;
+    let coverageStartDate = new Date(document.getElementById("coverageStartDate").value);
+
+    if (buydate == "Invalid Date") {
+
+
+        error_buydate.hidden = false;
+    } else {
+
+        if (purchaseCondition == "select purchase condition") {
+            error_purchasecondition.hidden = false;
+        } else {
+
+            if (annualDistance == "Select Annual Distance") {
+                error_annualdistance.hidden = false;
+
+            } else {
+
+                if (!(document.getElementById("carryPassengerno").checked || document.getElementById("carryPassengeryes").checked)) {
+
+
+
+                    error_passenger.hidden = false;
+
+                } else {
+
+
+                    if (!(document.getElementById("otherBusinessyes").checked || document.getElementById("otherBusinessno").checked)) {
+
+
+
+                        error_otherbuisness.hidden = false;
+
+                    } else {
+
+                        if (!(document.getElementById("winterTyresyes").checked || document.getElementById("winterTyresno").checked)) {
+
+
+
+                            error_wintertyre.hidden = false;
+
+                        } else {
+
+
+                            if (coverageStartDate == "Invalid Date") {
+
+
+                                error_coveradedate.hidden = false;
+                            } else {
+
+                                alert("Your vehicle information is valid you can get your quote");
+                                document.getElementById("myProgress").value = "100";
+                                document.getElementById("submitId").disabled = false;
+
+                            }
+
+
+                        }
+
+
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+}

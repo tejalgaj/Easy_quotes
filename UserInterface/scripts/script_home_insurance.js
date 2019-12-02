@@ -1,52 +1,59 @@
-// Slidder home page javascript
-var slideIndex = 0;
-showSlides();
+let selecttypehouse = document.getElementById("propertyType");
+let ownershipType = document.getElementById("ownershipType");
+let noofclaim = document.getElementById("earlierClaims")
+let type_house = ["House", "condo", "Apartment"];
+let owner_type = ["I own and live in it", "I rent it from someone else", "I own I dont live or rent"];
+let noof_claim = ["0", "1", "more than one"];
+let submitId = document.getElementById("submitId");
+document.getElementById("submitId").disabled = true;
+let resultLink = document.getElementById("resultLink");
+document.getElementById("propertyValidate").disabled = true;
+let error_fname = document.getElementById("error_fname");
+error_fname.hidden = true;
+let error_lname = document.getElementById("error_lname");
+error_lname.hidden = true;
+let error_age = document.getElementById("error_age");
+error_age.hidden = true;
+let error_prop = document.getElementById("error_prop");
+error_prop.hidden = true;
+let error_owner = document.getElementById("error_owner");
+error_owner.hidden = true;
+let error_address = document.getElementById("error_address");
+error_address.hidden = true;
+let error_builtdate = document.getElementById("error_builtdate");
+error_builtdate.hidden = true;
+let error_basement = document.getElementById("error_basement");
+error_basement.hidden = true;
+let error_claims = document.getElementById("error_claims");
+error_claims.hidden = true;
 
-function plusSlides(n) {
-    showSlidesmanual(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlidesmanual(slideIndex = n);
-}
-
-function showSlidesmanual(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 6000); // Change image every 6 seconds
-
+for (let i = 0; i < type_house.length; i++) {
+    let opt = type_house[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    selecttypehouse.appendChild(el);
 }
 
-//Translation javascript
+for (let i = 0; i < owner_type.length; i++) {
+    let opt = owner_type[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    ownershipType.appendChild(el);
+}
 
-let translations =
-{
+for (let i = 0; i < noof_claim.length; i++) {
+    let opt = noof_claim[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    noofclaim.appendChild(el);
+}
+
+
+//translation javascript function
+let translations = {
     "en": {
 
         "Home": "Home",
@@ -119,7 +126,7 @@ let translations =
         "nav_auto_insurance": "Assurance automobile",
         "nav_contact_us": "Contactez-nous",
         "nav_blog": "Blog",
-        "nav_faq": "Questions - réponses",
+        "nav_faq": "questions - réponses",
         "nav_claims": "réclamations",
         "help": "Aidez-moi"
 
@@ -165,10 +172,7 @@ function writeInLanguage() {
     let nav_faq = document.getElementById("nav_faq");
     let nav_claims = document.getElementById("nav_claims");
     let help = document.getElementById("help");
-    let home_insurance_detail = document.getElementById("home_insurance_detail");
-    let auto_insurance_detail = document.getElementById("auto_insurance_detail");
-    let contact_us_details = document.getElementById("contact_us_details");
-    let faq_details = document.getElementById("faq_details");
+
 
 
 
@@ -196,11 +200,8 @@ function writeInLanguage() {
     let translate_have_question = translations[language].have_question;
     let translate_nav_claims = translations[language].nav_claims;
     let translate_help = translations[language].help;
-    let translate_home_insurance_heading = translations[language].home_insurance;
-    let translate_home_insurance_detail = translations[language].home_insurance_detail;
-    let translate_auto_insurance_detail = translations[language].auto_insurance_detail;
-    let translate_contact_us_details = translations[language].contact_us_details;
-    let translate_faq_details = translations[language].faq_details;
+
+
 
 
 
@@ -235,20 +236,173 @@ function writeInLanguage() {
     nav_faq.innerText = translate_auto_insurance;
     nav_claims.innerText = translate_nav_claims;
     help.innerText = translate_help;
-    home_insurance_heading.innerText = translate_home_insurance_heading;
-    home_insurance_detail.innerText = translate_home_insurance_detail;
-    auto_insurance_heading.innerText = translate_auto_insurance;
-    contact_us_heading.innerText = translate_contact_us;
-    faq_heading.innerText = translate_faq;
-    auto_insurance_detail.innerText = translate_auto_insurance_detail;
-    contact_us_details.innerText = translate_contact_us_details;
-    faq_details.innerText = translate_faq_details;
+
+
+
 
 
 }
 
-$("#language").on("change", function () {
+$("#language").on("change", function() {
     language = $("#language").val();
     writeInLanguage();
 });
 writeInLanguage();
+
+
+//user validation
+function validate_user_info() {
+
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    error_fname.hidden = true;
+    error_lname.hidden = true;
+    error_age.hidden = true;
+    let nameRGEX = /^[a-z ,.'-]+$/i;
+
+
+    let today = new Date();
+    let birthdate = new Date(document.getElementById("birthday").value);
+    let presentdate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    let age = today.getFullYear() - birthdate.getFullYear();
+    let m = today.getMonth() - birthdate.getMonth();
+
+
+    if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+        age--;
+    }
+
+
+
+
+    let firstnameresult = nameRGEX.test(firstName);
+    let lastnameresult = nameRGEX.test(lastName);
+
+    if (firstnameresult == false || firstName.length < 4) {
+
+        error_fname.hidden = false;
+
+
+
+    }
+
+    if (firstnameresult == true && firstName.length >= 4) {
+
+        if (lastnameresult == false || lastName.length < 4) {
+
+            error_lname.hidden = false;
+        }
+        if (lastnameresult == true && lastName.length >= 4) {
+            if (birthdate == "Invalid Date") {
+
+                error_age.hidden = false;
+            }
+            if (age < 18) {
+
+                error_age.hidden = false;
+            }
+
+
+            if (age > 18 && !(birthdate == "Invalid Date")) {
+                alert("Your personal information is valid Please fill property information");
+                document.getElementById("myProgress").value = "50";
+                document.getElementById("propertyValidate").disabled = false;
+            }
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+}
+//property validation
+function validate_property_info() {
+
+
+    let propertyType = document.getElementById("propertyType").value;
+    let ownershipType = document.getElementById("ownershipType").value;
+    let earlierClaims = document.getElementById("earlierClaims").value;
+    let homebuiltdate = document.getElementById("yearHouseBuilt").value;
+    let address = document.getElementById("address").value;
+    let yearHouseBuilt = new Date(document.getElementById("yearHouseBuilt").value);
+    error_prop.hidden = true;
+    error_owner.hidden = true;
+    error_address.hidden = true;
+    error_builtdate.hidden = true;
+    error_basement.hidden = true;
+    error_claims.hidden = true;
+    let adddressRGEX = /^[a-z ,.'-]+$/i;
+    let addressnameresult = adddressRGEX.test(address);
+
+
+
+    if (!(propertyType == "Choose the type of Property")) {
+        if (!(propertyType == "Choose the type of Property")) {
+
+            if (ownershipType == "Choose the type of Ownership") {
+
+
+                error_owner.hidden = false;
+            } else {
+
+                if (addressnameresult == false) {
+
+                    error_address.hidden = false;
+                } else {
+
+                    if (yearHouseBuilt == "Invalid Date") {
+
+
+                        error_builtdate.hidden = false;
+
+
+                    } else {
+                        if (!(document.getElementById("yearHouseBuiltYes").checked || document.getElementById("yearHouseBuiltNo").checked)) {
+
+
+
+                            error_basement.hidden = false;
+
+                        } else {
+                            if (!(earlierClaims == "Choose no. of claims")) {
+
+                                alert("Your property information is valid you can get your quote");
+                                document.getElementById("myProgress").value = "100";
+                                document.getElementById("submitId").disabled = false;
+
+
+                            } else {
+
+
+                                error_claims.hidden = false;;
+                            }
+
+
+
+                        }
+                    }
+
+
+                }
+
+
+
+
+
+            }
+
+
+
+        }
+    } else {
+
+        error_prop.hidden = false;
+
+    }
+}
