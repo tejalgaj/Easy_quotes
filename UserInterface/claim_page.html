@@ -3,10 +3,11 @@
 
 <head>
     <title>Insurance Claim Page</title>
-
-    <link rel="stylesheet" href="styles/claimstyles.css">
+    <link rel="stylesheet" href="Styles/claimstyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/claim_script.js"></script>
     <meta name="description" content="insurance claim pages">
     <meta name="keywords" content="home insurance,auto insurance,claims">
 </head>
@@ -15,9 +16,9 @@
     <div class="wrapper">
 
         <header>
-            <p>&#9742;+1-647-615-0190</p>
-            <p><b>&#9993;</b> Easyquotes@gmail.com</p>
-            <p>5-10 business days to process the claim</p>
+            <h4>&#9742;+1-647-615-0190</h4>
+            <h4><b>&#9993;</b> Easyquotes@gmail.com</h4>
+            <h4>5-10 business days to process the claim</h4>
 
         </header>
 
@@ -44,8 +45,8 @@
         <section class="BigScreen_view2">
 
             <div class="outer_section">
-                <button class="tablink" onclick="openPage('auto', this, '#2b7a78')">Auto Claim</button>
-                <button class="tablink" onclick="openPage('home', this, '#def2f1')" id="defaultOpen">Home Claims
+                <button class="tablink autosec">Auto Claims</button>
+                <button class="tablink homesec" id="defaultOpen">Home Claims
                 </button>
 
                 <div id="auto" class="tabcontent">
@@ -149,41 +150,56 @@
                         <p><strong><span lang="EN-CA">For Stolen Items We Will Ask For Proof of
                                     Ownership<br></span></strong><span lang="EN-CA">.</span></p>
 
-                        <form method="GET" id="feedback_frm">
-                            <fieldset id="acct_info">
-                                <legend>User Information</legend>
-                                <div>
-                                    <label for="first_name">First Name:</label>
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn">Claim Form</button>
 
-                                    <input type="text" name="first_name" id="first_name" placeholder="First Name">
-                                </div>
-                                <div>
-                                    <label for="last_name">Last Name:</label>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
 
-                                    <input type="text" name="last_name" id="last_name" placeholder="Last Name">
-                                </div>
-                                <div>
-                                    <label for="user_email">E-mail:</label>
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <form method="GET" id="feedback_frm">
+                                    <fieldset id="acct_info">
+                                        <legend>User Information</legend>
+                                        <div>
+                                            <label for="first_name">First Name:</label>
 
-                                    <input type="email" name="user_email" id="user_email" placeholder="Email">
-                                </div>
+                                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                                        </div>
+                                        <div>
+                                            <label for="last_name">Last Name:</label>
 
-                                <div>
-                                    <label for="user_phn">Phone Number:</label>
+                                            <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                                        </div>
+                                        <div>
+                                            <label for="user_email">E-mail:</label>
 
-                                    <input type="tel" name="user_phn" id="user_phn" placeholder="Phone Number">
-                                </div>
-                                <div id="setting_info">
-                                    <div>Comment:</div>
-                                    <div>
-                                        <textarea name="cmnt_box" id="commenr_box" rows="5" cols="75"></textarea>
-                                    </div>
-                                </div>
-                            </fieldset>
+                                            <input type="email" name="user_email" id="user_email" placeholder="Email">
+                                            <span id="claim_email_error"></span>
+                                        </div>
 
-                            <button id="submit_btn" type="button">Submit</button>
-                            <br>
-                        </form>
+                                        <div>
+                                            <label for="user_phn">Phone Number:</label>
+
+                                            <input type="tel" name="user_phn" id="user_phn" placeholder="Phone Number">
+                                            <span id="claim_phone_error"></span>
+                                        </div>
+                                        <div id="setting_info">
+                                            <div>Comment:</div>
+                                            <div>
+                                                <textarea name="cmnt_box" id="commenr_box" rows="5" cols="75"></textarea>
+                                            </div>
+                                        </div>
+                                        <button id="submit_btn" type="button">Submit</button>
+                                    </fieldset>
+
+                                    <br>
+                                </form>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
 
@@ -192,9 +208,11 @@
         </section>
 
         <section class="sideSection">
-            <marquee behavior="slide" direction="up" scrollamount="80" loop="-1"><div class="claim_img"><img src="Images/blog-side.jpg" alt="mad"></div>
+            <marquee behavior="slide" direction="up" scrollamount="80" loop="-1">
+                <div class="claim_img"><img src="Images/blog-side.jpg" alt="mad"></div>
                 <div class="claim_img"><img src="Images/eNewsletter-2017-en.jpg" alt="middlepic"></div>
-                <div class="claim_img"><img src="Images/side-madd.jpg" alt="tips"></div></marquee>
+                <div class="claim_img"><img src="Images/side-madd.jpg" alt="tips"></div>
+            </marquee>
         </section>
 
         <footer>
@@ -277,24 +295,6 @@
 
         </footer>
     </div>
-    <script>
-        function openPage(pageName, elmnt, color) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].style.backgroundColor = "";
-            }
-            document.getElementById(pageName).style.display = "block";
-            elmnt.style.backgroundColor = color;
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
 </body>
 
 </html>
