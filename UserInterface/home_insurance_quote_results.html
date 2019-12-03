@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Home Insurance Quote Results</title>
@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-
 </head>
 
 <body>
     <div class="wrapper">
+
         <header>
             <p>&#9742;+1-647-615-0190</p>
             <p><b>&#9993;</b> Easyquotes@gmail.com</p>
@@ -29,49 +29,70 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
-        <section class="advertisementFirst"><img class="insuranceadv" src="images/Insurance_adv.png" alt="Insurance Advertisement"></section>
-        <section class="advertisementSecond"><img class="insuranceadv" src="images/insuranceadv2.jpg" alt="Insurance Advertisement second"></section>
+        <section class="advertisementFirst">
+            <img class="insuranceadv" src="images/Insurance_adv.png" alt="Insurance Advertisement"></section>
+
+        <section class="advertisementSecond">
+            <img class="insuranceadv" src="images/insuranceadv2.jpg" alt="Insurance Advertisement second"></section>
+
         <progress value="80" max="100">
         </progress>
         <main class="smallMain">
             <div class="background">
                 <div class="banner">
-                    <p class="paragraph">Home Insurance <b>step 3 of 3</b></p>
-                    <h2>Quote #Q008184274</h2>
-                    <img class="image9" src="images/dollar-bag-green.jpg" width="40px" height="60px">
-                    <h3 id="right">$300.17/mo*</h3>
-                    <h3 id="right">$3600/yr*</h3>
-                    <h3 id="right">Call @ 1-647-333-2007</h3>
+                    <div class="scroll">
+                        <p class="paragraph">Home Insurance <b>step 3 of 3</b></p>
+                        <h2>Quote #Q008184274</h2>
+                        <p><img class="image9" src="images/dollar-bag-green.jpg" id="fire" alt="dollar bag for premium">
+                        </p>
+                        <h3>$300.17/mo*</h3>
+                        <h3>$3600/yr*</h3>
+                        <h3>Call @ 1-647-333-2007</h3>
+                    </div>
                 </div>
-                <form method="get" action="auto_insurance_quote_results.html">
-                    <fieldset>
-                        <legend>Please enter uour personal details</legend>
-                        <div class="customer">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required><br><br>
-                            <label for="Phone Number">Phone Number:</label>
-                            <input type="Phone Number" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-                            <div>
-                                <label for="radio">Contact me by:</label><br>
-                                <input type="radio" name="Contact me by:" value="Text" />Text<br>
-                                <input type="radio" name="Contact me by:" value="Email" />Email<br/>
-                                <input type="radio" name="Contact me by:" value="Don't contact me" />Don't contact me<br/>
-                            </div>
-                    </fieldset>
-                    <input type="submit" class="submitButton" value="Contact me">
-                    <div class="block">
-                        <p>Bundle Auto along with Home and get a discount of nearly $50/month</p>
-                        <p>Would you like to continue?</p>
-                        <a href="AutoInsuarnce.html">Get an Auto Estimate</a>
+            </div>
+            <form method="get" action="auto_insurance_quote_results.html">
+                <fieldset>
+                    <legend>Please enter uour personal details</legend>
+                    <div class="customer">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required><br><br>
+                        <label>Phone Number:</label>
+                        <input type="tel" name="phone" id="phonenumber" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}]" required>
                     </div>
-                    <div class="right">
-                        <p><b>Would you like to contact us?</b></p>
-                        <img src="images/5-tips-for-training-customer-service-agents.jpg" height="30%" width="100%">
-                        <p>Call now to buy or discuss your quote at:</p>
-                        <p>1-647-333-2007</p>
-                        <p>Monday - Friday 8:00 am - 8:00 pm EST</p>
+                    <div>
+                        <label>Contact me by:</label><br>
+                        <input type="radio" class="radioBtnClass" name="Contact me by:" value="Text" />Text<br>
+                        <input type="radio" class="radioBtnClass" name="Contact me by:" value="Email" />Email<br/>
+                        <input type="radio" class="radioBtnClass" name="Contact me by:" value="BothWays" />Both Text and Email<br/>
                     </div>
+                    <input type="button" class="submitButton" value="Contact me" id="btn-submit" onclick="popup();">
+                </fieldset>
+                <!--Creates the popup body-->
+                <div class=" popup-overlay ">
+                    <!--Creates the popup content-->
+                    <div class="popup-content ">
+                        <h2><i>Hurray!!!!!</i></h2>
+                        <p> Thanks for contacting us,our representative will contact you soon.</p>
+                        <!--popup's close button-->
+                        <input type="button" class="closeButton" value="Close" id="close" onclick="popup();">
                     </div>
+                </div>
+            </form>
+            <div class="block">
+                <p>Bundle Auto along with Home and get a discount of nearly $50/month</p>
+                <div id="flip">Click here to continue?</div>
+                <div id="panel"><a href="../UserInterface/auto_insurance_landing.html">Get an Auto Estimate</a>
+                </div>
+            </div>
+            <div class="right">
+                <p><b>Would you like to contact us?</b></p>
+                <img src="images/5-tips-for-training-customer-service-agents.jpg" id="sky" alt="customer rep" onclick="zoomin();">
+
+                <p>Call now to buy or discuss your quote at:</p>
+                <p>1-647-333-2007</p>
+                <p>Monday - Friday 8:00 am - 8:00 pm EST</p>
+            </div>
         </main>
         <section class="blog">
             <h2>Blog</h2>
@@ -100,7 +121,6 @@
             <label for="yes">yes</label>
             <input id="no" type="radio" value="no">
             <label for="no">no</label>
-
             <h2>Poll Result</h2>
             <p>yes</p>
             <section class="containerPoll">
@@ -111,6 +131,8 @@
                 <div class="poll no">10%</div>
             </section>
         </article>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type='text/javascript' src="scripts/home_qr_script.js"></script>
         <footer>
             <section class="mouse">
                 <a href="#" class="mouse-icon">
@@ -174,6 +196,5 @@
                 <h5>Copyright ©2019 All rights reserved</h5>
             </section>
         </footer>
+    </div>
 </body>
-
-</html>

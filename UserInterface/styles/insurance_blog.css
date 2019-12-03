@@ -8,6 +8,46 @@ body {
     margin: 0%;
 }
 
+#more {
+    display: none;
+}
+
+.showmore {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+}
+
+.showmore .more,
+.showmore.show .dots {
+    display: none
+}
+
+.showmore.show .more {
+    display: inline
+}
+
+.showmore a {
+    cursor: pointer;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+button {
+    padding: 0;
+    border: 0px;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: pointer;
+    color: red;
+    font-display: bold;
+    font-size: 20px;
+}
+
 
 /*body Css end*/
 
@@ -102,6 +142,127 @@ h2.footHeading {
 
 .menuStyled li a {
     text-decoration: none;
+}
+
+.mySlides {
+    display: none;
+}
+
+mySlidesChange {
+    display: none;
+}
+
+.slideshow-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.slideshow-black,
+.slideshow-hover-black:hover {
+    color: #fff!important;
+    background-color: #f1f1f1
+}
+
+.slideshow-display-left {
+    position: absolute;
+    top: 90%;
+    left: 24%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.slideshow-display-right {
+    position: absolute;
+    top: 90%;
+    right: 20%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+.slideshow-center {
+    text-align: center!important
+}
+
+.slideshow-content {
+    max-width: 980px
+}
+
+.slideshow-auto {
+    max-width: 1140px
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.button1 {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.button1:hover {
+    background-color: gray;
+    color: white;
+}
+
+.button2 {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.button2:hover {
+    background-color: gray;
+    color: white;
+}
+
+.imagerotate {
+    width: 30%;
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+@-moz-keyframes spin {
+    50% {
+        -moz-transform: rotateY(90deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    50% {
+        -webkit-transform: rotateY(90deg);
+    }
+}
+
+@keyframes spin {
+    50% {
+        -webkit-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+    }
+}
+
+.letters {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: crimson;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    perspective: 1200px;
+    overflow-x: hidden;
 }
 
 

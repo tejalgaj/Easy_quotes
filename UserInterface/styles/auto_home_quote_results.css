@@ -8,6 +8,38 @@ body {
     margin: 0%;
 }
 
+.error_Msg {
+    color: #fa4b2a;
+    padding-left: 10px;
+}
+
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 20%;
+    left: 25%;
+}
+
+.popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+}
+
+.popup-content {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+}
+
+.popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+}
+
 .pollOpinion {
     grid-area: pollOpinion;
 }
@@ -33,6 +65,11 @@ figure {
     padding: 0;
     margin: 0;
     width: 100%;
+}
+
+#fire {
+    width: 10%;
+    height: 20%;
 }
 
 
@@ -202,6 +239,19 @@ fieldset {
     width: 100px;
 }
 
+.closeButton {
+    background-color: #3AAFA9;
+    color: white;
+    padding: 0;
+    border: 0;
+    height: 30px;
+    width: 51px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 3px;
+    width: 100px;
+}
+
 
 /*Field set and input tags css end*/
 
@@ -229,6 +279,29 @@ progress {
 
 progress {
     grid-area: progressbar;
+}
+
+#register {
+    margin-top: 5%;
+    border: 1px lavender solid;
+    font-style: italic;
+}
+
+.scroll {
+    height: 300px;
+}
+
+#panel,
+#flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
 }
 
 
@@ -329,7 +402,7 @@ progress {
     /*Body Styles start*/
     .banner {
         padding-top: 0%;
-        background-image: linear-gradient(45deg, 3AAFA9, white);
+        background-image: linear-gradient(45deg, #3AAFA9, white);
         margin-top: 0%;
     }
     .block {
@@ -340,6 +413,19 @@ progress {
         width: 100%;
         margin-left: 3px;
         margin-right: 2px;
+    }
+    #sky {
+        width: 80%;
+        padding: 4%;
+        position: relative;
+    }
+    .right {
+        background-color: lavender;
+        font-style: italic;
+    }
+    .right p {
+        float: center;
+        padding-left: 4%;
     }
     /*Body Styles end*/
 }
@@ -404,7 +490,7 @@ progress {
     }
     .banner {
         padding-top: 0%;
-        background-image: linear-gradient(45deg, lavender, white);
+        background-image: linear-gradient(45deg, #3AAFA9, white);
         margin-top: 0%;
     }
     .block {
@@ -413,6 +499,19 @@ progress {
         margin-top: 10px;
         margin-left: 3px;
         margin-right: 5px;
+    }
+    #sky {
+        width: 80%;
+        padding: 4%;
+        position: relative;
+    }
+    .right {
+        background-color: lavender;
+        font-style: italic;
+    }
+    .right p {
+        float: center;
+        padding-left: 4%;
     }
     /*Body Styles end*/
 }
@@ -507,6 +606,15 @@ progress {
     }
     .right {
         background-color: lavender;
+    }
+    .right p {
+        font-style: italic;
+        padding-left: 4%;
+    }
+    #sky {
+        width: 80%;
+        padding: 4%;
+        position: relative;
     }
     .block {
         border: 1px solid #3AAFA9;
