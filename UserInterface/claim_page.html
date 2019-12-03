@@ -3,7 +3,7 @@
 
 <head>
     <title>Insurance Claim Page</title>
-    <link rel="stylesheet" href="styles/claimstyles.css">
+    <link rel="stylesheet" href="Styles/claimstyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -165,32 +165,33 @@
                                         <div>
                                             <label for="first_name">First Name:</label>
 
-                                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                                            <input type="text" name="first_name" id="first_name" placeholder="First Name"><span>*</span>
                                         </div>
                                         <div>
                                             <label for="last_name">Last Name:</label>
 
-                                            <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                                            <input type="text" name="last_name" id="last_name" placeholder="Last Name"><span>*</span>
                                         </div>
                                         <div>
                                             <label for="user_email">E-mail:</label>
 
-                                            <input type="email" name="user_email" id="user_email" placeholder="Email">
+                                            <input type="email" name="user_email" id="user_email" placeholder="Email"><span>*</span>
                                             <span id="claim_email_error"></span>
                                         </div>
 
                                         <div>
                                             <label for="user_phn">Phone Number:</label>
 
-                                            <input type="tel" name="user_phn" id="user_phn" placeholder="Phone Number">
+                                            <input type="tel" name="user_phn" id="user_phn" placeholder="Phone Number"><span>*</span>
                                             <span id="claim_phone_error"></span>
                                         </div>
                                         <div id="setting_info">
                                             <div>Comment:</div>
                                             <div>
-                                                <textarea name="cmnt_box" id="commenr_box" rows="5" cols="75"></textarea>
+                                                <textarea name="cmnt_box" id="commenr_box" rows="5" cols="75"></textarea><span>*</span>
                                             </div>
                                         </div>
+                                        <span id="reqd_note">* Required Field</span><br>
                                         <button id="submit_btn" type="button">Submit</button>
                                     </fieldset>
 
