@@ -59,6 +59,15 @@ a {
 	color: inherit;
 }
 
+#feedback_frm span
+{
+color:red;
+padding-left: 2px;
+}
+#reqd_note
+{
+	font-size: 12px;
+}
 
 /* Html, body, pollOpinion, smallMain css end */
 
