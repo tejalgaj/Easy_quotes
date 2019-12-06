@@ -1,4 +1,5 @@
-//Variables
+//Hidding the error span
+
 let error_fname = document.getElementById("error_fname");
 error_fname.hidden = true;
 let error_lname = document.getElementById("error_lname");
@@ -23,10 +24,80 @@ let error_wintertyre = document.getElementById("error_wintertyre");
 error_wintertyre.hidden = true;
 let error_coveradedate = document.getElementById("error_coveradedate");
 error_coveradedate.hidden = true;
+let successValidate = document.getElementById("successValidate");
+successValidate.hidden = true;
+let successValidateProperty = document.getElementById("successValidateProperty");
+successValidateProperty.hidden = true;
+let error_address = document.getElementById("error_address");
+error_address.hidden = true;
+
+
+//Populating dropdown 
+
+let issuingProvincee = document.getElementById("issuingProvince");
+let issuingProvinceetype = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"];
+let licenceClass = document.getElementById("licenceClass");
+let licenceClasstype = ["Class F", "Class G", "Learners G1"];
+let purchaseCondition = document.getElementById("purchaseCondition");
+let purchaseConditiontype = ["New", "Old"];
+let annualDistance = document.getElementById("annualDistance");
+let annualDistancetype = ["Under 8,000 km", "8,001 to 16,000 km", "16,001 to 24,000 km", "Over 24,000 km"];
+
+//Poluating dropdown for province
+for (let i = 0; i < issuingProvinceetype.length; i++) {
+    let opt = issuingProvinceetype[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    issuingProvincee.appendChild(el);
+}
+//Poluating dropdown for licenseclass
+
+for (let i = 0; i < licenceClasstype.length; i++) {
+    let opt = licenceClasstype[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    licenceClass.appendChild(el);
+}
+//Poluating dropdown for purchase condition
+for (let i = 0; i < purchaseConditiontype.length; i++) {
+    let opt = purchaseConditiontype[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    purchaseCondition.appendChild(el);
+}
+//Poluating dropdown for Annual distance
+for (let i = 0; i < annualDistancetype.length; i++) {
+    let opt = annualDistancetype[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    annualDistance.appendChild(el);
+}
+
+//Disabling the auto form
+
 document.getElementById("vehiclevalidation").disabled = true;
 document.getElementById("submitId").disabled = true;
+document.getElementById("search_input").disabled = true;
+document.getElementById("buydate").disabled = true;
+document.getElementById("purchaseCondition").disabled = true;
+document.getElementById("annualDistance").disabled = true;
+document.getElementById("carryPassengeryes").disabled = true;
+document.getElementById("error_passenger").disabled = true;
+document.getElementById("otherBusinessyes").disabled = true;
+document.getElementById("winterTyresyes").disabled = true;
+document.getElementById("winterTyresno").disabled = true;
+document.getElementById("coverageStartDate").disabled = true;
+document.getElementById("vehiclevalidation").disabled = true;
+document.getElementById("carryPassengerno").disabled = true;
+document.getElementById("otherBusinessno").disabled = true;
+
 
 //language javascipt
+
 
 let translations = {
     "en": {
@@ -111,7 +182,7 @@ let translations = {
 
 };
 
-var language = "en";
+
 
 function writeInLanguage() {
 
@@ -225,11 +296,52 @@ function writeInLanguage() {
 
 }
 
+let language = localStorage.getItem("language");
+if (language == "en") {
+    writeInLanguage();
+}
+if (language == "fr") {
+    writeInLanguage();
+
+}
+
 $("#language").on("change", function() {
     language = $("#language").val();
     writeInLanguage();
+
+    if (language == "en") {
+        localStorage.clear();
+        localStorage.setItem("language", "en");
+    }
+
+    if (language == "fr") {
+        localStorage.clear();
+
+        localStorage.setItem("language", "fr");
+    }
+
+
 });
-writeInLanguage();
+
+var searchInput = 'search_input';
+$(document).ready(function() {
+
+
+    if (localStorage.getItem("language") == "en") {
+        $("#language").val("en");
+    }
+    if (localStorage.getItem("language") == "fr") {
+        $("#language").val("fr");
+    }
+    var autocomplete;
+    var geocoder = new google.maps.Geocoder;
+
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        types: ['geocode'],
+    });
+
+
+});
 
 //user validation
 
@@ -296,7 +408,21 @@ function validate_user() {
 
                         document.getElementById("myProgress").value = "50";
                         document.getElementById("vehiclevalidation").disabled = false;
-                        alert("Your personal information is valid Please fill vehicle information");
+                        successValidate.hidden = false;
+
+                        document.getElementById("search_input").disabled = false;
+                        document.getElementById("buydate").disabled = false;
+                        document.getElementById("purchaseCondition").disabled = false;
+                        document.getElementById("annualDistance").disabled = false;
+                        document.getElementById("carryPassengeryes").disabled = false;
+                        document.getElementById("error_passenger").disabled = false;
+                        document.getElementById("otherBusinessyes").disabled = false;
+                        document.getElementById("winterTyresyes").disabled = false;
+                        document.getElementById("winterTyresno").disabled = false;
+                        document.getElementById("coverageStartDate").disabled = false;
+                        document.getElementById("vehiclevalidation").disabled = false;
+                        document.getElementById("carryPassengerno").disabled = false;
+                        document.getElementById("otherBusinessno").disabled = false;
 
 
                     }
@@ -319,70 +445,74 @@ function validate_vehicle() {
     error_passenger.hidden = true;
     error_wintertyre.hidden = true;
     error_coveradedate.hidden = true;
+    error_address.hidden = true;
     let purchaseCondition = document.getElementById("purchaseCondition").value;
     let buydate = new Date(document.getElementById("buydate").value);
     let annualDistance = document.getElementById("annualDistance").value;
     error_otherbuisness.hidden = true;
     let coverageStartDate = new Date(document.getElementById("coverageStartDate").value);
-
+    let address = document.getElementById("search_input").value;
     if (buydate == "Invalid Date") {
 
 
         error_buydate.hidden = false;
     } else {
+        if (address == "") {
 
-        if (purchaseCondition == "select purchase condition") {
-            error_purchasecondition.hidden = false;
+            error_address.hidden = false;
         } else {
-
-            if (annualDistance == "Select Annual Distance") {
-                error_annualdistance.hidden = false;
-
+            if (purchaseCondition == "Select purchase condition") {
+                error_purchasecondition.hidden = false;
             } else {
 
-                if (!(document.getElementById("carryPassengerno").checked || document.getElementById("carryPassengeryes").checked)) {
-
-
-
-                    error_passenger.hidden = false;
+                if (annualDistance == "Select Annual Distance") {
+                    error_annualdistance.hidden = false;
 
                 } else {
 
-
-                    if (!(document.getElementById("otherBusinessyes").checked || document.getElementById("otherBusinessno").checked)) {
-
+                    if (!(document.getElementById("carryPassengerno").checked || document.getElementById("carryPassengeryes").checked)) {
 
 
-                        error_otherbuisness.hidden = false;
+
+                        error_passenger.hidden = false;
 
                     } else {
 
-                        if (!(document.getElementById("winterTyresyes").checked || document.getElementById("winterTyresno").checked)) {
+
+                        if (!(document.getElementById("otherBusinessyes").checked || document.getElementById("otherBusinessno").checked)) {
 
 
 
-                            error_wintertyre.hidden = false;
+                            error_otherbuisness.hidden = false;
 
                         } else {
 
+                            if (!(document.getElementById("winterTyresyes").checked || document.getElementById("winterTyresno").checked)) {
 
-                            if (coverageStartDate == "Invalid Date") {
 
 
-                                error_coveradedate.hidden = false;
+                                error_wintertyre.hidden = false;
+
                             } else {
 
-                                alert("Your vehicle information is valid you can get your quote");
-                                document.getElementById("myProgress").value = "100";
-                                document.getElementById("submitId").disabled = false;
+
+                                if (coverageStartDate == "Invalid Date") {
+
+
+                                    error_coveradedate.hidden = false;
+                                } else {
+                                    document.getElementById("myProgress").value = "100";
+                                    document.getElementById("submitId").disabled = false;
+                                    successValidateProperty.hidden = false;
+
+                                }
+
 
                             }
 
 
+
                         }
-
-
-
                     }
 
 

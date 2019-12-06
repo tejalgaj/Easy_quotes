@@ -9,19 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAu-uOv_Eide3bVQjz-ctagIQcfDQs1lrc&region=CA"></script>
 
 </head>
 
 <body>
-    
-<!--wrapper-->
+
+    <!--wrapper-->
     <div class="wrapper">
 
-<!--header-->
+        <!--header-->
         <header>
             <p>&#9742;+1-647-615-0190</p>
             <p><b>&#9993;</b> Easyquotes@gmail.com</p>
-            <p id ="process">5-10 business days to process the claim</p>
+            <p id="process">5-10 business days to process the claim</p>
             <p><select id="language">
                 <option value="en" >English</option>
                 <option value="fr" >French</option>
@@ -29,35 +30,35 @@
             </select></p>
 
         </header>
-<!--logo-->
+        <!--logo-->
         <figure>
             <img class="logo" src="images/easyquotes.png" alt="easy quotes logo">
         </figure>
-<!--nav-->
+        <!--nav-->
         <nav class="homeNav">
 
 
             <ul class="navList">
-                <li><a id ="home_text"  href="home.html">Home</a></li>
-                <li><a id ="home_insurance" href="home_landing.html">Home Insurance</a></li>
-                <li><a id ="auto_insurance"  href="auto_insurance_landing.html">Auto Insurance</a></li>
-                <li><a id ="contact_us" href="contact_us.html">Contact Us </a></li>
-                <li><a id ="blog" href="blog.html">Blog</a></li>
+                <li><a id="home_text" href="home.html">Home</a></li>
+                <li><a id="home_insurance" href="home_landing.html">Home Insurance</a></li>
+                <li><a id="auto_insurance" href="auto_insurance_landing.html">Auto Insurance</a></li>
+                <li><a id="contact_us" href="contact_us.html">Contact Us </a></li>
+                <li><a id="blog" href="blog.html">Blog</a></li>
 
             </ul>
         </nav>
-<!--advertisement first-->
+        <!--advertisement first-->
         <section class="advertisementFirst"><img class="insuranceadv" src="images/Insurance_adv.png" alt="Insurance Advertisement"></section>
-<!--advertisement second-->
+        <!--advertisement second-->
         <section class="advertisementSecond"><img class="insuranceadv" src="images/insuranceadv2.jpg" alt="Insurance Advertisement second"></section>
-<!--progress-->
-        <progress id ="myProgress" value="0" max="100">
+        <!--progress-->
+        <progress id="myProgress" value="0" max="100">
 
         </progress>
 
-  <!--main-->
+        <!--main-->
         <main class="smallMain">
-  <!--form-->
+            <!--form-->
             <form method="get" action="auto_insurance_quote_results.html">
                 <fieldset>
                     <legend>Your Information</legend>
@@ -84,26 +85,19 @@
                             <label for="issuingProvince">Issuing province</label>
                             <select class="dropdownSelect" id="issuingProvince" name="Source">
                                 <option>Select a state</option>
-                                <option value="Ontario">Ontario</option>
-                                <option value="Cubic">Cubic</option>
+                               
                             </select>
                             <span id="error_issuingProvince">*Please select a state</span>
-                        </li>
-                        <li class="form-row">
-                            <label for="licenceNumber">Driver's licence number </label>
-                            <input type="text" class="inputText" id="licenceNumber" />
                         </li>
                         <li class="form-row">
                             <label for="licenceClass">Licence class</label>
                             <select class="dropdownSelect" id="licenceClass" name="Source">
                                 <option>Select a License Class</option>
-                                <option value="classF">Class F</option>
-                                <option value="classG">Class G</option>
-                                <option value="learnersG1">Learners G1</option>
                             </select>
-                             <span id="error_licenceClass">*Please select a License class</span>
+                            <span id="error_licenceClass">*Please select a License class</span>
                         </li>
                         <li class="validateButton"> <input type="button" onclick="validate_user()" value="Validate"> </li>
+                        <li> <span class="successMessage" id="successValidate">Your personal information is valid Please fill property information</span> </li>
 
                     </ul>
 
@@ -116,24 +110,20 @@
 
                     <ul class="formElement">
                         <li class="form-row">
-                            <label for="carType">What are you driving ?</label><input type="text" id="carType" class="inputText" />
-                        </li>
-                        <li class="form-row">
                             <label for="buydate">When did you lease or buy it ?</label>
-                            <input  type="date" id="buydate" class="inputText">
+                            <input type="date" id="buydate" class="inputText">
                             <span id="error_buydate">*Please select a Lease or buy date</span>
 
                         </li>
                         <li class="form-row">
-                            <label for="address">Your address</label>
-                            <input type="text" id="address" class="inputText" />
+                            <label for="search_input">Address to insure</label>
+                            <input type="text" id="search_input" placeholder="Type address..." />
+                            <span id="error_address">*Please fill your address</span>
                         </li>
                         <li class="form-row">
                             <label for="purchaseCondition">Purchase condition</label>
                             <select class="dropdownSelect" id="purchaseCondition" name="Source">
-                                <option>select purchase condition</option>
-                                <option value="new">New</option>
-                                <option value="old">Old</option>
+                                <option>Select purchase condition</option>
                             </select>
                             <span id="error_purchasecondition">*Please select purchase condition</span>
                         </li>
@@ -141,16 +131,8 @@
                             <label for="annualDistance">Annual distance</label>
                             <select class="dropdownSelect" id="annualDistance" name="Source">
                                 <option>Select Annual Distance</option>
-                                <option value="new">Under 8,000 km</option>
-                                <option value="old">8,001 to 16,000 km</option>
-                                <option value="demo">16,001 to 24,000 km</option>
-                                <option value="demo">Over 24,000 km</option>
                             </select>
                             <span id="error_annualdistance">*Please select Annual Distance</span>
-                        </li>
-                        <li class="form-row">
-                            <label for="dailyCommute">Daily commute (one-way)</label>
-                            <input type="text" id="dailyCommute" class="inputText" />
                         </li>
 
                         <li class="form-row">
@@ -179,7 +161,8 @@
                             <input type="date" id="coverageStartDate" class="inputText" />
                             <span id="error_coveradedate">*Please select a coverage date</span>
                         </li>
-                        <li class="validateButton"> <input type="button"  id="vehiclevalidation"  onclick = "validate_vehicle()" value="Validate"></li>
+                        <li class="validateButton"> <input type="button" id="vehiclevalidation" onclick="validate_vehicle()" value="Validate"></li>
+                        <li> <span class="successMessage" id="successValidateProperty">Your vehicle information is valid please click on Get the quote button</span> </li>
 
                     </ul>
 
@@ -191,7 +174,7 @@
 
             </form>
         </main>
- <!--blog-->
+        <!--blog-->
         <section class="blog">
             <h2 id="blog_heading">Blog</h2>
             <details open>
@@ -201,28 +184,28 @@
                 </p>
             </details>
             <details>
-                <summary  id="blog_heading_2" class="blogHeading">Will my policy protect me if a contractor, subcontractor or construction worker is hurt on my property while working on my home remodel?</summary>
+                <summary id="blog_heading_2" class="blogHeading">Will my policy protect me if a contractor, subcontractor or construction worker is hurt on my property while working on my home remodel?</summary>
                 <p id="blog_detail_2">The simplest answer to this complicated question is often “no.” You need to verify that your contractor carries a general liability insurance policy, and also that they are covered by workers compensation. If you do the work yourself,
                     obviously the risk of a contractor damaging your home or being injured is not a factor. However, this doesn’t change your need to notify your insurer about remodel plans. DIY renovations are still home renovations.
                 </p>
             </details>
             <details>
-                <summary  id="blog_heading_3" class="blogHeading">Get in Touch</summary>
+                <summary id="blog_heading_3" class="blogHeading">Get in Touch</summary>
                 <p id="blog_detail_3">Planning a home renovation and need to update your homeowners insurance coverage accordingly? Our friendly, knowledgeable team of insurance brokers can help! Contact us online or give us a call at 1-888-853-5552.
                 </p>
             </details>
 
 
         </section>
-    <!--poll opinion-->
+        <!--poll opinion-->
 
         <article class="pollOpinion">
             <h2 id="opinion_heading">Opinion Poll</h2>
             <p id="opinion_title">Do you like to get insurance on yearly basis ?</p>
             <input type="radio" id="yes" value="yes" checked>
-            <label id ="yes_label" for="yes">yes</label>
+            <label id="yes_label" for="yes">yes</label>
             <input id="no" type="radio" value="no">
-            <label  id ="no_label"for="no">no</label>
+            <label id="no_label" for="no">no</label>
 
             <h2 id="poll_result">Poll Result</h2>
             <p>yes</p>
@@ -239,7 +222,7 @@
 
 
 
-  <!--footer-->
+        <!--footer-->
         <footer>
 
 
@@ -274,9 +257,9 @@
                         <li><a id="nav_home" href="home.html">Home</a></li>
                         <li><a id="nav_home_insurance" href="home_landing.html">Home Insurance</a></li>
                         <li><a id="nav_auto_insurance" href="auto_insurance_landing.html">Auto Insurance</a></li>
-                        <li><a id="nav_contact_us"href="contact_us.html">Contact Us </a></li>
-                        <li><a id="nav_blog"href="blog.html">Blog</a></li>
-                        <li><a id="nav_faq"href="faq.html">FAQ</a></li>
+                        <li><a id="nav_contact_us" href="contact_us.html">Contact Us </a></li>
+                        <li><a id="nav_blog" href="blog.html">Blog</a></li>
+                        <li><a id="nav_faq" href="faq.html">FAQ</a></li>
                         <li><a id="nav_claims" href="claim_page.html">Claims</a></li>
                     </ul>
 
@@ -319,12 +302,12 @@
             </section>
 
         </footer>
-     
 
 
-     
+
+
     </div>
-    <script src = "scripts/script_auto_insurance.js"></script>
+    <script src="scripts/script_auto_insurance.js"></script>
 
 </body>
 

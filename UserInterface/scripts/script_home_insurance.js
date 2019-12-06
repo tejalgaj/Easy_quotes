@@ -1,13 +1,5 @@
-let selecttypehouse = document.getElementById("propertyType");
-let ownershipType = document.getElementById("ownershipType");
-let noofclaim = document.getElementById("earlierClaims")
-let type_house = ["House", "condo", "Apartment"];
-let owner_type = ["I own and live in it", "I rent it from someone else", "I own I dont live or rent"];
-let noof_claim = ["0", "1", "more than one"];
-let submitId = document.getElementById("submitId");
-document.getElementById("submitId").disabled = true;
-let resultLink = document.getElementById("resultLink");
-document.getElementById("propertyValidate").disabled = true;
+//Hidding the error span
+
 let error_fname = document.getElementById("error_fname");
 error_fname.hidden = true;
 let error_lname = document.getElementById("error_lname");
@@ -27,6 +19,15 @@ error_basement.hidden = true;
 let error_claims = document.getElementById("error_claims");
 error_claims.hidden = true;
 
+//Populate dropd Down
+
+let selecttypehouse = document.getElementById("propertyType");
+let ownershipType = document.getElementById("ownershipType");
+let noofclaim = document.getElementById("earlierClaims")
+let type_house = ["House", "condo", "Apartment"];
+let owner_type = ["I own and live in it", "I rent it from someone else", "I own I dont live or rent"];
+let noof_claim = ["0", "1", "more than one"];
+//Poluating dropdown for Type of house
 for (let i = 0; i < type_house.length; i++) {
     let opt = type_house[i];
     let el = document.createElement("option");
@@ -34,7 +35,7 @@ for (let i = 0; i < type_house.length; i++) {
     el.value = opt;
     selecttypehouse.appendChild(el);
 }
-
+//Poluating dropdown for Type of owner
 for (let i = 0; i < owner_type.length; i++) {
     let opt = owner_type[i];
     let el = document.createElement("option");
@@ -42,7 +43,7 @@ for (let i = 0; i < owner_type.length; i++) {
     el.value = opt;
     ownershipType.appendChild(el);
 }
-
+//Poluating dropdown for no of claim
 for (let i = 0; i < noof_claim.length; i++) {
     let opt = noof_claim[i];
     let el = document.createElement("option");
@@ -50,6 +51,26 @@ for (let i = 0; i < noof_claim.length; i++) {
     el.value = opt;
     noofclaim.appendChild(el);
 }
+
+
+// Disabling home option
+document.getElementById("propertyType").disabled = true;
+document.getElementById("ownershipType").disabled = true;
+document.getElementById("earlierClaims").disabled = true;
+document.getElementById("yearHouseBuilt").disabled = true;
+document.getElementById("search_input").disabled = true;
+document.getElementById("yearHouseBuilt").disabled = true;
+document.getElementById("yearHouseBuiltYes").disabled = true;
+document.getElementById("yearHouseBuiltNo").disabled = true;
+let submitId = document.getElementById("submitId");
+document.getElementById("submitId").disabled = true;
+let resultLink = document.getElementById("resultLink");
+document.getElementById("propertyValidate").disabled = true;
+
+let successValidate = document.getElementById("successValidate");
+successValidate.hidden = true;
+let successValidateProperty = document.getElementById("successValidateProperty");
+successValidateProperty.hidden = true;
 
 
 //translation javascript function
@@ -136,7 +157,7 @@ let translations = {
 
 };
 
-let language = "en";
+
 
 function writeInLanguage() {
 
@@ -246,8 +267,29 @@ function writeInLanguage() {
 $("#language").on("change", function() {
     language = $("#language").val();
     writeInLanguage();
+
+    if (language == "en") {
+        localStorage.clear();
+        localStorage.setItem("language", "en");
+    }
+
+    if (language == "fr") {
+        localStorage.clear();
+
+        localStorage.setItem("language", "fr");
+    }
+
+
 });
-writeInLanguage();
+let language = localStorage.getItem("language");
+if (language = "en") {
+    writeInLanguage();
+}
+if (language = "fr") {
+    writeInLanguage();
+
+}
+
 
 
 //user validation
@@ -304,9 +346,17 @@ function validate_user_info() {
 
 
             if (age > 18 && !(birthdate == "Invalid Date")) {
-                alert("Your personal information is valid Please fill property information");
                 document.getElementById("myProgress").value = "50";
                 document.getElementById("propertyValidate").disabled = false;
+                document.getElementById("propertyType").disabled = false;
+                document.getElementById("ownershipType").disabled = false;
+                document.getElementById("earlierClaims").disabled = false;
+                document.getElementById("yearHouseBuilt").disabled = false;
+                document.getElementById("search_input").disabled = false;
+                document.getElementById("yearHouseBuilt").disabled = false;
+                document.getElementById("yearHouseBuiltYes").disabled = false;
+                document.getElementById("yearHouseBuiltNo").disabled = false;
+                successValidate.hidden = false;
             }
 
 
@@ -329,7 +379,7 @@ function validate_property_info() {
     let ownershipType = document.getElementById("ownershipType").value;
     let earlierClaims = document.getElementById("earlierClaims").value;
     let homebuiltdate = document.getElementById("yearHouseBuilt").value;
-    let address = document.getElementById("address").value;
+    let address = document.getElementById("search_input").value;
     let yearHouseBuilt = new Date(document.getElementById("yearHouseBuilt").value);
     error_prop.hidden = true;
     error_owner.hidden = true;
@@ -337,8 +387,7 @@ function validate_property_info() {
     error_builtdate.hidden = true;
     error_basement.hidden = true;
     error_claims.hidden = true;
-    let adddressRGEX = /^[a-z ,.'-]+$/i;
-    let addressnameresult = adddressRGEX.test(address);
+
 
 
 
@@ -351,7 +400,7 @@ function validate_property_info() {
                 error_owner.hidden = false;
             } else {
 
-                if (addressnameresult == false) {
+                if (address == "") {
 
                     error_address.hidden = false;
                 } else {
@@ -372,9 +421,11 @@ function validate_property_info() {
                         } else {
                             if (!(earlierClaims == "Choose no. of claims")) {
 
-                                alert("Your property information is valid you can get your quote");
+
                                 document.getElementById("myProgress").value = "100";
                                 document.getElementById("submitId").disabled = false;
+                                successValidateProperty.hidden = false;
+
 
 
                             } else {
@@ -406,3 +457,24 @@ function validate_property_info() {
 
     }
 }
+
+var searchInput = 'search_input';
+
+$(document).ready(function() {
+    if (localStorage.getItem("language") == "en") {
+        $("#language").val("en");
+    }
+    if (localStorage.getItem("language") == "fr") {
+        $("#language").val("fr");
+    }
+
+
+    var autocomplete;
+    var geocoder = new google.maps.Geocoder;
+
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        types: ['geocode'],
+    });
+
+
+});

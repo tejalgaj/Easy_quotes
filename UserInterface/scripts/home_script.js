@@ -5,6 +5,7 @@ showSlides();
 function plusSlides(n) {
     showSlidesmanual(slideIndex += n);
 }
+
 function currentSlide(n) {
     showSlidesmanual(slideIndex = n);
 }
@@ -45,8 +46,7 @@ function showSlides() {
 
 //Translation javascript
 
-let translations =
-{
+let translations = {
     "en": {
 
         "Home": "Home",
@@ -129,7 +129,14 @@ let translations =
 
 };
 
-let language = "en";
+let language = localStorage.getItem("language");
+if (language == "en") {
+    writeInLanguage();
+}
+if (language == "fr") {
+    writeInLanguage();
+
+}
 
 function writeInLanguage() {
 
@@ -247,8 +254,34 @@ function writeInLanguage() {
 
 }
 
-$("#language").on("change", function () {
+$("#language").on("change", function() {
     language = $("#language").val();
     writeInLanguage();
+
+    if (language == "en") {
+        localStorage.clear();
+        localStorage.setItem("language", "en");
+    }
+
+    if (language == "fr") {
+        localStorage.clear();
+
+        localStorage.setItem("language", "fr");
+    }
+
+
 });
-writeInLanguage();
+//writeInLanguage();
+
+$(document).ready(function() {
+
+
+    if (localStorage.getItem("language") == "en") {
+        $("#language").val("en");
+    }
+    if (localStorage.getItem("language") == "fr") {
+        $("#language").val("fr");
+    }
+
+
+});
