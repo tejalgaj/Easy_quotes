@@ -3,9 +3,9 @@
 
 <head>
     <title>FAQ Page</title>
-    <link rel="stylesheet" href="Styles/main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/faq.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
 </head>
 
 <body>
@@ -22,92 +22,106 @@
         </figure>
 
         <nav class="homeNav">
-
             <ul class="navList">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="home_landing.html">Home Insurance</a></li>
                 <li><a href="auto_insurance_landing.html">Auto Insurance</a></li>
                 <li><a href="contact_us.html">Contact Us </a></li>
                 <li><a href="blog.html">Blog</a></li>
-
             </ul>
         </nav>
 
-        <section class="advertisementFirst">
-            <img class="insuranceadv" src="images/Find-out-how-to-File-A-Car-Insurance-Claim.jpg" alt="Insurance Advertisement" />
-            <img class="insuranceadv" src="images/home_insurance.jpg" alt="Insurance Advertisement second" />
-        </section>
-        <section class="advertisementSecond">
-            <h2 style="padding-left: 15px;">Any Question??</h2>
-            <fieldset>
-                <ul class="elementForm">
-                    <li class="row-form">
-                        <label for="Name">Name</label><br>
-                        <input type="text" id="Name" class="input_text" placeholder="Enter your name" /><br/>
-                    </li>
-                    <li class="row-form">
-                        <label for="Email">Email</label><br/>
-                        <input type="text" id="Email" class="input_text" placeholder="Enter your email" /><br/>
-                        <span id="report_email_error"></span>
-                    </li>
-                    <li class="row-form">
-                        <label for="Phone">Phone number</label><br/>
-                        <input type="text" id="Phone" class="input_text" placeholder="Enter phone number" /><br/>
-                        <span id="report_phone_error"></span>
-                    </li>
-                    <li class="row-form">
-                        <label for="Ques">Question</label><br/>
-                        <input type="text" id="Ques" class="input_text" placeholder="Questions......" /><br/>
-                    </li>
-                </ul>
-                <input type="button" class="btnSend" value="Send" onclick="sendQuestion()" />
-            </fieldset>
+        <section class="sideSection">
+            <h2>Grab the<br>latest deals</h2>
+            <h3>Get $750 off on<br> your home<br> insurance.</h3>
+            <h3>Get 15% off on<br> your car<br> insurance.</h3>
+            <h3>The average cost<br>of car insurance is<br> $1,502 per year,
+                <br> or $751 per six<br>-month policy<br>($125.16 per month).</h3>
         </section>
 
-        <main class="smallMain">
-            <p>Since 1969, Easyquotes has been providing quality insurance to Canadians. From car insurance to homeowners insurance, we have solutions to suit your unique needs. You're In Good Hands With Rate Insurance.</p>
-
-            <p>On June 1, 2016, the accident benefits included in Ontario standard auto insurance policies changed. The Ontario government introduced these changes to make premiums more affordable, offer greater choice for consumers and improve the overall
-                system. While in some circumstances the reforms affect the monetary amount of accident benefits that an individual may receive for injuries sustained in a collision, they do not affect access to the treatments and benefits needed to recover.</p>
-
-            <h3>What types of insurance does Easyquotes Insurance offer?</h3>
-            <p>Easyquotes Insurance is Canada’s largest personal and business insurance company. We offer auto, home insurance through a network of brokers across Canada.</p>
-
-            <h3>How can we help you today?</h3>
-            <p>At Easyquotes, our main goals are to give you the information you need to put you at the center of every decision, and to give you advice to help protect what’s important to you. With hundreds of local experts, you can rely on our trusted
-                advice and all the support you deserve.</p>
-
-            <h3>How long do I have access?</h3>
-            <p>You have lifetime access to the plan. In other words, it never expires. Months, even years from now you can re-use the plan without paying again.</p>
-
-            <h3>How does the refund policy works?</h3>
-            <p>If you're unhappy for any reason, email us within 30 days of purchasing on the web, and we will give you a full refund. No strings attached.</p>
-
-            <h3>What can I do to make sure that I have enough insurance?</h3>
-            <p>Your insurance broker will assess your needs based on the details you provide about your home or vehicle. In case of home insurance, a complete inventory of your belongings will help you get the right coverage and make it easier to file a
-                claim.
-            </p>
-
-            <h3>Is the rate given to me accurate? </h3>
-            <p>We use the same rating software as the majority of insurance brokers in Canada (i.e., Compu- Quote Rating Services). When you call a broker, they take your details and do quotes with the companies they are contracted with, usually 3 or 4 different
-                companies, and then give you a rate from those companies. Easyquotes@gmail.com, however, check rates from more than 30 of the top insurance companies in Canada, giving consumers a more comprehensive view of the universe of insurance rates
-                to help ensure they are quoted the lowest rate available. Rates are based on the information provided, and we update regularly to ensure our accuracy. Most rate discrepancies occur due to wrong information inputted. For example, many car
-                models are similarly-named; Nissan Altima vs. Nissan Altima SE. This discrepancy can lead to a considerable difference in rates.</p>
+        <main class = "faqMain">
+            <h1>Frequently Asked Questions</h1>
+            <button class="accordion">What types of insurance does Easyquotes Insurance offer?</button>
+                <div class="panel">
+                    <p>Easyquotes Insurance is Canada’s largest personal and business insurance company. 
+                       We offer auto, home insurance through a network of brokers across Canada.
+                    </p>
+                </div>
+            <button class="accordion">How can we help you today?</button>
+                <div class="panel">
+                    <p>At Easyquotes, our main goals are to give you the information you need to put you at the center of
+                        every decision, and to give you advice to help protect what’s important to you. With hundreds
+                         of local experts, you can rely on our trusted advice and all the support you deserve.
+                    </p>
+                </div>
+            <button class="accordion">How long do I have access?</button>
+                <div class="panel">
+                    <p>You have lifetime access to the plan. In other words, it never expires. Months, even years
+                            from now you can re-use the plan without paying again.
+                    </p>
+                </div>
+            <button class="accordion">How does the refund policy works?</button>
+                <div class="panel">
+                    <p>If you're unhappy for any reason, email us within 30 days of purchasing on the web, and we
+                        will give you a full refund. No strings attached.  
+                    </p>
+                </div>
+            <button class="accordion">What can I do to make sure that I have enough insurance?</button>
+                <div class="panel">
+                    <p>Your insurance broker will assess your needs based on the details you provide about your home 
+                            or vehicle. In case of home insurance, a complete inventory of your belongings will help you get
+                            the right coverage and make it easier to file a claim.
+                    </p>
+                </div>
+            <button class="accordion">Is the rate given to me accurate?</button>
+                <div class="panel">
+                    <p>We use the same rating software as the majority of insurance brokers in Canada (i.e., Compu-
+                            Quote Rating Services). When you call a broker, they take your details and do quotes with the 
+                            companies they are contracted with, usually 3 or 4 different companies, and then give you a rate
+                            from those companies. Easyquotes@gmail.com, however, check rates from more than 30 of the top 
+                            insurance companies in Canada, giving consumers a more comprehensive view of the universe of 
+                            insurance rates to help ensure they are quoted the lowest rate available. Rates are based on the 
+                            information provided, and we update regularly to ensure our accuracy. Most rate discrepancies occur
+                            due to wrong information inputted. For example, many car models are similarly-named; Nissan Altima 
+                            vs. Nissan Altima SE. This discrepancy can lead to a considerable difference in rates.
+                    </p>
+                </div>
+            <button class="accordion">Can I get fire insurance through Easyquotes?</button>
+                <div class="panel"> 
+                    <p>EasyQuotes covers you for loss or damage caused by a fire whether you’re a homeowner, condo owner, landlord or tenant. Proof of fire insurance is often requested by a mortgagee or landlord – our policies include fire insurance along with many other coverages. You can provide a copy of your home insurance policy for this request.
+                    </p>
+                </div>
+            <button class="accordion">What's the difference between Actual Replacemnet Cost and Actual Cash Value?</button>
+                <div class="panel"> 
+                    <p>Actual Replacement Cost. If you have a claim and decide to repair or replace your lost or damaged property, we’ll cover this no matter how much it costs and without any deduction for depreciation (wear and tear from its use). 
+                    Actual Cash Value. If you have a claim and decide not to repair or replace your lost or damaged property, we can pay you cash for the cost of the item, taking into consideration its condition at the time of loss. For example, if you had a bicycle that was 10 years old, we’d price it based on its age and used condition. The value of the item is reduced because of normal wear and tear over time.                 
+                   </p>
+                </div>
+            <button class="accordion">What groups are eligible for discount?</button>
+                <div class="panel">
+                    <p>Specific groups related to education, profession or affinity that have partnered with Sonnet are eligible for the group discount. As a member, you should receive communications from your organization about your group discount with EasyQuotes. 
+                     </p>
+                </div>
+            <button class="accordion">How did you get information about my property/vehicle?</button>
+                <div class="panel">
+                    <p>Your property: All the information we access about properties in your area is public data. A variety of service providers maintain this data. We just assemble it to simplify the quote process and get you the most competitive price.
+                        <br>Your vehicle: The information we get about your vehicle and your claims/driving history mainly comes from the Insurance Bureau of Canada and the Ministry of Transportation for your province (in Quebec, we also get information from the Groupement des assureurs automobiles). 
+                     </p>
+                </div>
         </main>
-
 
         <section class="blog">
             <h2>Blog</h2>
             <details open>
                 <summary class="blogHeading">Will my current homeowners insurance policy provide sufficient coverage while my home is being remodeled?</summary>
-                <p>If you are planning to move out of your home temporarily while your renovation project is completed, this can impact your existing insurance policy. This is especially true if you will be out of your home for 30 days or longer. You may
-                    need to change your home’s status to “under construction” or obtain a home vacancy permit in order to have coverage for perils like vandalism or theft while your home is unoccupied.
-                </p>
+                    <p>If you are planning to move out of your home temporarily while your renovation project is completed, this can impact your existing insurance policy. This is especially true if you will be out of your home for 30 days or longer. You may
+                        need to change your home’s status to “under construction” or obtain a home vacancy permit in order to have coverage for perils like vandalism or theft while your home is unoccupied.
+                    </p>
             </details>
             <details>
                 <summary class="blogHeading">Will my policy protect me if a contractor, subcontractor or construction worker is hurt on my property while working on my home remodel?</summary>
                 <p>The simplest answer to this complicated question is often “no.” You need to verify that your contractor carries a general liability insurance policy, and also that they are covered by workers compensation. If you do the work yourself,
-                    obviously the risk of a contractor damaging your home or being injured is not a factor. However, this doesn’t change your need to notify your insurer about remodel plans. DIY renovations are still home renovations.
+                        obviously the risk of a contractor damaging your home or being injured is not a factor. However, this doesn’t change your need to notify your insurer about remodel plans. DIY renovations are still home renovations.
                 </p>
             </details>
             <details>
@@ -115,9 +129,19 @@
                 <p>Planning a home renovation and need to update your homeowners insurance coverage accordingly? Our friendly, knowledgeable team of insurance brokers can help! Contact us online or give us a call at 1-888-853-5552.
                 </p>
             </details>
-
-
         </section>
+
+        <article class="sideBar">
+            <div class="aside_auto">
+                <div class="quoteNow">Need Help? Call Us</div>
+                <div class="quoteInput">
+                    <ul>
+                        <li>Find Your Closest Agency</li>
+                        <li>Call: 1-647-615-0190</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
 
         <footer>
             <section class="mouse">
@@ -142,7 +166,7 @@
                                 </a></li>
                     </ul>
                 </section>
-
+                
                 <section class="footerColumnMenu">
                     <h2 class="footHeading">Menu</h2>
                     <ul class="menuStyled">
@@ -155,7 +179,7 @@
                         <li><a href="claim_page.html">Claims</a></li>
                     </ul>
                 </section>
-
+                
                 <section class="footerHelp">
                     <h2 class="footHeading_help">Help</h2>
                     <p>
@@ -163,13 +187,13 @@
                         and other insurance product quotes online – fast!
                     </p>
                 </section>
-
+                
                 <section class="footerColumnQuestion">
                     <h2 class="footHeading">Have a Questions?</h2>
                     <ul class="locDet">
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i>
                             <p>103 Triple crown avenue, Etobicoke Ontario
-                                <p>
+                            <p>
                         </li>
                         <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
                             <p>+1 647-615-0190</p>
@@ -186,9 +210,9 @@
             </section>
 
         </footer>
-
+        
     </div>
-    <script type="text/javascript" src="scripts/faq.js"></script>
+    <script src="scripts/faq.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 
 <head>
     <title>Contact Us Page</title>
-    <link rel="stylesheet" href="styles/mainCon.css" />
+    <link rel="stylesheet" href="styles/contact_us.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 </head>
@@ -66,22 +66,22 @@
                     <h5>We're here to help and answer any questions you might have.<br/> We look forward to hearing from you.</h5>
                     <ul class="elementForm">
                         <li class="row-form">
-                            <label for="Name">Name</label>
+                            <label for="Name" style="margin-right: 29%;">Name</label>
                             <input type="text" id="Name" class="input_text" />
                             <span id="report_name_error"></span>
                         </li>
                         <li class="row-form">
-                            <label for="Email">Email</label>
+                            <label for="Email" style="margin-right: 29%;">Email</label>
                             <input type="text" id="Email" class="input_text" />
                             <span id="report_email_error"></span>
                         </li>
                         <li class="row-form">
-                            <label for="Phone">Phone number</label>
+                            <label id="phonelabel" for="Phone">Phone number</label>
                             <input type="text" id="Phone" class="input_text" />
                             <span id="report_phone_error"></span>
                         </li>
                         <li class="row-form">
-                            <label for="Msg">Message</label>
+                            <label id="MsgLabel" for="Msg">Message</label>
                             <input type="text" id="Msg" class="input_text" />
                         </li>
                         <li class="SendButton"><input type="button" value="Send Message" onclick="sendContact()"> </li>
@@ -217,7 +217,7 @@
         </footer>
 
     </div>
-    <script type="text/javascript" src="faq.js"></script>
+    <script type="text/javascript" src="scripts/faq.js"></script>
 </body>
 
 </html>
