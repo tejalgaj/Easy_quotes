@@ -3,7 +3,7 @@
 
 <head>
     <title>Contact Us Page</title>
-    <link rel="stylesheet" href="Styles/mainCon.css" />
+    <link rel="stylesheet" href="styles/mainCon.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 </head>
@@ -58,43 +58,44 @@
             </div>
         </section>
 
-        <main class="formContact" style="margin-left: 29%;">
+        <main class="formContact">
             <form method="get">
                 <h2>Are you covered? Home and Car Insurance</h2>
                 <fieldset>
                     <legend>Contact Evernotes</legend>
                     <h5>We're here to help and answer any questions you might have.<br/> We look forward to hearing from you.</h5>
                     <ul class="elementForm">
-                        <li class="row-form" style="display: flex;justify-content: space-between;">
+                        <li class="row-form">
                             <label for="Name">Name</label>
-                            <input type="text" id="Name" class="input_text" style="margin-left: 19%;" />
+                            <input type="text" id="Name" class="input_text" />
                             <span id="report_name_error"></span>
                         </li>
-                        <li class="row-form" style="display: flex;justify-content: space-between;">
+                        <li class="row-form">
                             <label for="Email">Email</label>
-                            <input type="text" id="Email" class="input_text" style="margin-left: 19%;" />
+                            <input type="text" id="Email" class="input_text" />
                             <span id="report_email_error"></span>
                         </li>
-                        <li class="row-form" style="display: flex;justify-content: space-between;">
+                        <li class="row-form">
                             <label for="Phone">Phone number</label>
                             <input type="text" id="Phone" class="input_text" />
                             <span id="report_phone_error"></span>
                         </li>
-                        <li class="row-form" style="display: flex;justify-content: space-between;">
+                        <li class="row-form">
                             <label for="Msg">Message</label>
                             <input type="text" id="Msg" class="input_text" />
                         </li>
                         <li class="SendButton"><input type="button" value="Send Message" onclick="sendContact()"> </li>
                     </ul>
-                    <h4>Email: Easyquotes@gmail.com</h4>
-                    <h4>Phone no.: +1 647-615-0190</h4>
+
                 </fieldset>
             </form>
             <br/>
             <br/>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.0709349558338!2d-79.60506889452111!3d43.72985324767873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3a4dc11cbe7d%3A0x6d77c972c063a288!2s103%20Triple%20Crown%20Ave%2C%20Etobicoke%2C%20ON%20M9W%207E2!5e0!3m2!1sen!2sca!4v1574957698581!5m2!1sen!2sca"
-                width="450" height="275" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe id="formMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.0709349558338!2d-79.60506889452111!3d43.72985324767873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3a4dc11cbe7d%3A0x6d77c972c063a288!2s103%20Triple%20Crown%20Ave%2C%20Etobicoke%2C%20ON%20M9W%207E2!5e0!3m2!1sen!2sca!4v1574957698581!5m2!1sen!2sca"
+                width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </main>
+
+
 
         <section class="blog">
             <h2>Blog</h2>
@@ -119,6 +120,17 @@
 
         </section>
 
+        <article class="sideBar">
+            <div class="aside_auto">
+                <div class="quoteNow">Need Help?<br/> Email or Call Us</div>
+                <div class="quoteInput">
+                    <ul>
+                        <li>Easyquotes@gmail.com</li>
+                        <li>Call: 1-647-615-0190</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
 
 
 
@@ -205,7 +217,7 @@
         </footer>
 
     </div>
-    <script type="text/javascript" src="scripts/faq.js"></script>
+    <script type="text/javascript" src="faq.js"></script>
 </body>
 
 </html>
