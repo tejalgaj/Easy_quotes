@@ -276,12 +276,6 @@ fieldset {
 /*Small Screen*/
 
 @media only screen and (max-width: 992px) {
-    #MsgLabel {
-        margin-right: 27%;
-    }
-    #phonelabel {
-        margin-right: 21%;
-    }
     /*Header section css start*/
     .navList li a {
         font-size: 10px;
@@ -351,12 +345,6 @@ fieldset {
 /*Medium Screen*/
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    #MsgLabel {
-        margin-right: 27%;
-    }
-    #phonelabel {
-        margin-right: 22%;
-    }
     .formContact {
         margin-top: 1%;
     }
@@ -398,12 +386,6 @@ fieldset {
 /*Big Screen*/
 
 @media only screen and (min-width: 1201px) {
-    #MsgLabel {
-        margin-right: 23%;
-    }
-    #phonelabel {
-        margin-right: 13%;
-    }
     /*Blog section start*/
     .blog {
         padding: 1%;
