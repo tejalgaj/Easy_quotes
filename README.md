@@ -6,7 +6,7 @@ Easy Quotes Insurance
 
 ### Html Files
 
-* home.html
+* index.html
 * auto_insurance_form.html
 * home_insurance_form.html
 
