@@ -130,5 +130,5 @@ If user unable to find address through API suggestion , user can manually enter 
 ## Author
 
 * **Harrabab Singh**
-***Tejal Gajjar**
+*  **Tejal Gajjar**
 
