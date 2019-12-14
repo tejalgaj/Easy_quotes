@@ -71,11 +71,64 @@ Auto Insurance Form Page is the page where submit auto insurance form in this we
 * Google api to auto populate address.
 
 
+Tejal's contribution
+
+### Html Files
+
+* auto_insurance_landing.html
+* claim_page.html
+* insurance_select.html
+
+### Css Files
+
+* insurance_selectstyles.css ( auto_insurance_landing.html , insurance_select.html )
+* claimstyles.css ( claim_page.html )
+
+### Javascript Files
+
+* landing_select.js ( auto_insurance_landing.html , insurance_select.html )
+* claim_script.js ( claim_page.html )
+
+### Functionality
+
+*  Auto Insurance Landing page contains information about auto insurance and types of insurance we are providing.
+* Blog section displays topics related to auto insurance and useful links section provides direct access to auto insurance page.
+* Content section showing brief information about 3 types of insurance with flip functionality.This page also displays counter as well         with number of happy and satisfied customers who have already bought insurance. In the background Gradient functionality is used.
+* System is responsive for all 3 types of screen. Big , medium and small.
+
+
+Claim contains information about claims.
+There are 2 types of claim
+* Home Claim
+* Auto claim
+
+Content section showing information regarding frequently asked questions about home and auto claims.This page also displays Form with validation of information user have entered.
+This form is visible as pop-up section when user clicks on button
+Home claim form contains following validations
+* Validation
+    *  All Fields are mandatory. Asterix to display all fields are required
+    *  Email field with proper format of email address need to be there
+    *  As this website is only for Canadian users so Phone number should be in format of Canadian phone number. 
+    *  If user enters invalid format of phone number , error message will display proper format of phone number
+    
+    
+ 
+Insurance select page contains Form.Which Redirects to auto insurance page.
+This form contains following fields
+*  Address Field  with google Places API
+*  Postal code Field
+*  Type of insurance
+As this website is for Canada , this API will fetch only addresses of Canada. 
+When user enters first 3-4 letter of his/her address, API will display list of related address.
+Once user selects address from list, System will automatically fetch postal code from selected address and display postal code in postal code field.
+If user unable to find address through API suggestion , user can manually enter address and postal code to related fields.
+
 
   
 
 
 ## Author
 
-* **Harrabab Singh** 
+* **Harrabab Singh**
+***Tejal Gajjar**
 
