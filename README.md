@@ -8,6 +8,8 @@ Easy Quotes Insurance
 # link for the website
 https://harrabab.github.io/harrabab/index.html
 
+### Harrabab Singh's Contribution
+
 ### Html Files
 
 * index.html
@@ -71,7 +73,7 @@ Auto Insurance Form Page is the page where submit auto insurance form in this we
 * Google api to auto populate address.
 
 
-Tejal's contribution
+### Tejal's contribution
 
 ### Html Files
 
@@ -124,6 +126,31 @@ Once user selects address from list, System will automatically fetch postal code
 If user unable to find address through API suggestion , user can manually enter address and postal code to related fields.
 
 
+Jasandeep Kaur Contribution
+
+### Html Files
+faq.html
+contact_us.html
+home_landing.html
+
+### Css Files
+faq.css
+contact_us.css
+home_landing.css
+
+### Javascript Files
+faq.js
+Functionality:
+In faq page, i have added questions related to both home and auto insurance and also added content related to particular questions. In left section various discount and deals are displayed and in the right side bog section is display.
+For frequently asked questions, accordion is used with the help of javascript , on click a particular question content related to that question is displayed in the panel.
+In Home landing page, form is displayed for postal code and type of insurance and validation is added on both the fields so that user will not go further without filling the required fields and validation is added using regular expression.
+In Contact us page, form is added with various fields so that user need to enter these fields if they have any query related to both types of insurance. Regular expression is used in the validation so that user can enter data in the fields in a particular order.
+⦁	in name field user can enter only characters not numeric data.
+⦁	email is entered in a particular format like example@gmail.com if the user doesnot follow this pattern then it will display an error message.
+⦁	phone number field user can enter numeric data not characters.
+⦁	in message field characters to used.
+Also map is added which display the  location of the insurance company. In the left section flip-cards are used: front side display the images related to home and car insurance and back side of flip cards display the deals related to the particular insurance and in the right section blog and need help is shown as in need help contact information is displayed like phone number etectera.
+
   
 
 
@@ -131,4 +158,5 @@ If user unable to find address through API suggestion , user can manually enter 
 
 * **Harrabab Singh**
 *  **Tejal Gajjar**
+*  **Jasndeep Kaur**
 
