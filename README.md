@@ -152,25 +152,30 @@ In Contact us page, form is added with various fields so that user need to enter
 ⦁	in message field characters to used.
 Also map is added which display the  location of the insurance company. In the left section flip-cards are used: front side display the images related to home and car insurance and back side of flip cards display the deals related to the particular insurance and in the right section blog and need help is shown as in need help contact information is displayed like phone number etectera.
 
-Sandeep Contribution
+### Sandeep's contribution
 
 ### Html Files
 home_insurance_quote_results.html
 blog.html
- auto_insurance_quote_results.html
-Css Files
+auto_insurance_quote_results.html
+
+### CSS Files
 auto_home_quote_results.css
 insurance_blog.css
-Javascript Files
+
+### Javascript Files
 auto_home_qr_script.js
 blog_script.js
 
-Functionality:
-Blog page is the page which contains all the details on insurance trends and gives details on 4 points people should keep on mind who owns house/vehicle
-2 Things to do at a home before a Vacation Abroad.
-What does your home insurance policy cover,exacly?
-Three Questions you should ask before buying auto insurance
-Three things you can do to help keep your auto insurance costs down
+### Functionality:
+Blog Page:
+Blog page is the page which contains all the details on insurance trends and gives details on 4 points people should keep on mind who owns house/vehicle:
+1)2 Things to do at a home before a Vacation Abroad.
+2)What does your home insurance policy cover,exacly?
+3)Three Questions you should ask before buying auto insurance
+4)Three things you can do to help keep your auto insurance costs down
+
+Auto-Quote-Results:
 Auto Insurance Quote Results is the final page of the application the user navigates who takes vehicle insurance. This page covers the Coverage options as follows:
 Liability(limit/deductibles): 
 Liability to non-owned automobiles(s):
@@ -180,6 +185,8 @@ Loss Of Use
 Family Protection
 This page also give details of applied discounts of the user and the contact information so that the user can reach to complete the quote. The premium per month and year is displayed along with coverage options.
 The user’s limits and deductibles are made available using a view limits and deductibles button on the load of the page.
+
+Home-Quote-Results:
 Home Owners Quote Results page is the final page of the application, the user navigates who takes home insurance from Easy Quotes. The premium per month and year is displayed along with the contact info.
 Validation:
 Email address validation is done on this page and the error is raised whenever a invalid email id is entered by the user.
@@ -199,4 +206,5 @@ The contact us is displayed along with the mailing address and phone number so t
 * **Harrabab Singh**
 *  **Tejal Gajjar**
 *  **Jasndeep Kaur**
+*  **Sandeep**
 
