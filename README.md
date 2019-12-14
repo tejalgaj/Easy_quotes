@@ -140,7 +140,8 @@ home_landing.css
 
 ### Javascript Files
 faq.js
-Functionality:
+
+### Functionality
 In faq page, i have added questions related to both home and auto insurance and also added content related to particular questions. In left section various discount and deals are displayed and in the right side bog section is display.
 For frequently asked questions, accordion is used with the help of javascript , on click a particular question content related to that question is displayed in the panel.
 In Home landing page, form is displayed for postal code and type of insurance and validation is added on both the fields so that user will not go further without filling the required fields and validation is added using regular expression.
@@ -150,6 +151,45 @@ In Contact us page, form is added with various fields so that user need to enter
 ⦁	phone number field user can enter numeric data not characters.
 ⦁	in message field characters to used.
 Also map is added which display the  location of the insurance company. In the left section flip-cards are used: front side display the images related to home and car insurance and back side of flip cards display the deals related to the particular insurance and in the right section blog and need help is shown as in need help contact information is displayed like phone number etectera.
+
+Sandeep Contribution
+
+### Html Files
+home_insurance_quote_results.html
+blog.html
+ auto_insurance_quote_results.html
+Css Files
+auto_home_quote_results.css
+insurance_blog.css
+Javascript Files
+auto_home_qr_script.js
+blog_script.js
+
+Functionality:
+Blog page is the page which contains all the details on insurance trends and gives details on 4 points people should keep on mind who owns house/vehicle
+2 Things to do at a home before a Vacation Abroad.
+What does your home insurance policy cover,exacly?
+Three Questions you should ask before buying auto insurance
+Three things you can do to help keep your auto insurance costs down
+Auto Insurance Quote Results is the final page of the application the user navigates who takes vehicle insurance. This page covers the Coverage options as follows:
+Liability(limit/deductibles): 
+Liability to non-owned automobiles(s):
+Collision
+Comprehensive
+Loss Of Use
+Family Protection
+This page also give details of applied discounts of the user and the contact information so that the user can reach to complete the quote. The premium per month and year is displayed along with coverage options.
+The user’s limits and deductibles are made available using a view limits and deductibles button on the load of the page.
+Home Owners Quote Results page is the final page of the application, the user navigates who takes home insurance from Easy Quotes. The premium per month and year is displayed along with the contact info.
+Validation:
+Email address validation is done on this page and the error is raised whenever a invalid email id is entered by the user.
+Phone number validation is done and the error is raised whenever the user enters a invalid phone number.
+Contact us by option is added so that the mode of communication is selected by the user.
+Bundling options are given so that the user can bundle home along with auto and get a discount of upto 50$.If the user wishes to bundle a link is provided to navigate to home page of Auto Insurance quote.
+The contact us is displayed along with the mailing address and phone number so that the user can contact the company.
+
+
+
 
   
 
