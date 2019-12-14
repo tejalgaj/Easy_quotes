@@ -168,32 +168,32 @@ auto_home_qr_script.js
 blog_script.js
 
 ### Functionality:
-Blog Page:
+### Blog Page:
 Blog page is the page which contains all the details on insurance trends and gives details on 4 points people should keep on mind who owns house/vehicle:
-1)2 Things to do at a home before a Vacation Abroad.
-2)What does your home insurance policy cover,exacly?
-3)Three Questions you should ask before buying auto insurance
-4)Three things you can do to help keep your auto insurance costs down
+*2 Things to do at a home before a Vacation Abroad.
+*What does your home insurance policy cover,exacly?
+*Three Questions you should ask before buying auto insurance
+*Three things you can do to help keep your auto insurance costs down
 
-Auto-Quote-Results:
+### Auto-Quote-Results:
 Auto Insurance Quote Results is the final page of the application the user navigates who takes vehicle insurance. This page covers the Coverage options as follows:
-Liability(limit/deductibles): 
+*Liability(limit/deductibles): 
 Liability to non-owned automobiles(s):
-Collision
-Comprehensive
-Loss Of Use
-Family Protection
-This page also give details of applied discounts of the user and the contact information so that the user can reach to complete the quote. The premium per month and year is displayed along with coverage options.
-The user’s limits and deductibles are made available using a view limits and deductibles button on the load of the page.
+*Collision
+*Comprehensive
+*Loss Of Use
+*Family Protection
+*This page also give details of applied discounts of the user and the contact information so that the user can reach to complete the quote. The premium per month and year is displayed along with coverage options.
+*The user’s limits and deductibles are made available using a view limits and deductibles button on the load of the page.
 
-Home-Quote-Results:
+### Home-Quote-Results:
 Home Owners Quote Results page is the final page of the application, the user navigates who takes home insurance from Easy Quotes. The premium per month and year is displayed along with the contact info.
 Validation:
-Email address validation is done on this page and the error is raised whenever a invalid email id is entered by the user.
-Phone number validation is done and the error is raised whenever the user enters a invalid phone number.
-Contact us by option is added so that the mode of communication is selected by the user.
-Bundling options are given so that the user can bundle home along with auto and get a discount of upto 50$.If the user wishes to bundle a link is provided to navigate to home page of Auto Insurance quote.
-The contact us is displayed along with the mailing address and phone number so that the user can contact the company.
+*Email address validation is done on this page and the error is raised whenever a invalid email id is entered by the user.
+*Phone number validation is done and the error is raised whenever the user enters a invalid phone number.
+*Contact us by option is added so that the mode of communication is selected by the user.
+*Bundling options are given so that the user can bundle home along with auto and get a discount of upto 50$.If the user wishes to bundle a link is provided to navigate to home page of Auto Insurance quote.
+*The contact us is displayed along with the mailing address and phone number so that the user can contact the company.
 
 
 
